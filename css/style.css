@@ -1,0 +1,840 @@
+/* ==========================================================================
+   INDUCTION DAY 2026 - PPT STAGE PRESENTATION STYLESHEET
+   Grace College of Engineering (GCOE)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap');
+
+:root {
+  --bg-dark: #060914;
+  --bg-panel: rgba(14, 21, 46, 0.92);
+  --bg-card: rgba(255, 255, 255, 0.05);
+  --border-gold: #f59e0b;
+  --border-cyan: #06b6d4;
+  --border-glass: rgba(255, 255, 255, 0.15);
+  
+  --text-gold: #fbbf24;
+  --text-cyan: #38bdf8;
+  --text-white: #ffffff;
+  --text-silver: #e2e8f0;
+  --text-muted: #94a3b8;
+
+  --font-display: 'Outfit', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'Space Grotesk', monospace;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--bg-dark);
+  font-family: var(--font-body);
+  color: var(--text-white);
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: radial-gradient(circle at 50% 15%, #1e1b4b 0%, #0a0e22 55%, #03050d 100%);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* ==========================================================================
+   MAIN STAGE VIEWPORT (100% FULLSCREEN PROJECTOR STAGE)
+   ========================================================================== */
+.main-stage-viewport {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.stage-card-wrapper {
+  width: 100%;
+  max-width: 1520px;
+  height: 100%;
+  max-height: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==========================================================================
+   SLIDE 0: WELCOME COVER SLIDE
+   ========================================================================== */
+.slide-cover-layout {
+  width: 100%;
+  max-width: 1280px;
+  background: var(--bg-panel);
+  border: 2px solid var(--border-glass);
+  border-radius: 40px;
+  padding: 3rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.85), 0 0 70px rgba(79, 70, 229, 0.4);
+  backdrop-filter: blur(25px);
+  position: relative;
+}
+
+.cover-gold-badge {
+  color: var(--text-gold);
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  padding: 0.4rem 1.4rem;
+  border-radius: 9999px;
+  margin-bottom: 0.75rem;
+}
+
+.cover-welcome-text {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-cyan);
+  letter-spacing: 0.15em;
+  margin-bottom: 0.25rem;
+}
+
+.cover-college-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 5vw, 4.4rem);
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  line-height: 1.05;
+  text-shadow: 0 0 40px rgba(6, 182, 212, 0.4);
+  margin-bottom: 0.35rem;
+}
+
+.cover-college-tagline {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.cover-center-box {
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.28) 0%, rgba(6, 182, 212, 0.2) 100%);
+  border: 1px solid rgba(6, 182, 212, 0.35);
+  border-radius: 24px;
+  padding: 1.25rem 2.5rem;
+  margin-bottom: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cover-event-pill {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--text-gold);
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+}
+
+.cover-event-sub {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 0.25rem;
+}
+
+.cover-batch-badge {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-cyan);
+  background: rgba(6, 182, 212, 0.15);
+  border: 1px solid rgba(6, 182, 212, 0.35);
+  padding: 0.25rem 1rem;
+  border-radius: 9999px;
+  margin-top: 0.6rem;
+}
+
+.cover-dept-name {
+  font-size: 1.2rem;
+  color: var(--text-silver);
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.cover-venue-strip {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--text-gold);
+  margin-bottom: 1.5rem;
+}
+
+.cover-cta-row {
+  background: linear-gradient(135deg, #4f46e5, #06b6d4);
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  font-weight: 700;
+  padding: 0.75rem 2.2rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(6, 182, 212, 0.4);
+  transition: all 0.25s ease;
+}
+.cover-cta-row:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(6, 182, 212, 0.6);
+}
+.cta-arrow {
+  font-size: 1.3rem;
+  transition: transform 0.2s ease;
+}
+.cover-cta-row:hover .cta-arrow {
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   SLIDE 1: AGENDA TABLE LAYOUT
+   ========================================================================== */
+.slide-agenda-layout {
+  width: 100%;
+  max-width: 1360px;
+  display: flex;
+  flex-direction: column;
+}
+
+.agenda-header-strip {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.agenda-tag-badge {
+  color: var(--text-gold);
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.35rem;
+}
+
+.agenda-screen-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 4.5vw, 3.4rem);
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.3rem;
+}
+
+.agenda-sub {
+  font-size: 1.15rem;
+  color: var(--text-cyan);
+  font-weight: 700;
+}
+.agenda-venue {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-top: 0.25rem;
+}
+
+.agenda-table-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+  overflow-y: auto;
+  max-height: calc(100vh - 210px);
+  padding: 0.25rem;
+}
+
+.agenda-table-row {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-glass);
+  border-radius: 16px;
+  padding: 0.85rem 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  cursor: pointer;
+  transition: all 0.22s ease;
+  backdrop-filter: blur(16px);
+}
+.agenda-table-row:hover {
+  border-color: var(--border-cyan);
+  background: rgba(79, 70, 229, 0.35);
+  transform: translateX(8px);
+  box-shadow: 0 6px 25px rgba(6, 182, 212, 0.3);
+}
+
+.time-col {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-gold);
+  background: rgba(245, 158, 11, 0.15);
+  padding: 0.4rem 0.85rem;
+  border-radius: 9px;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  flex-shrink: 0;
+}
+
+.event-col {
+  flex: 1;
+}
+.event-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+}
+.person-name {
+  font-size: 0.92rem;
+  color: var(--text-cyan);
+  font-weight: 600;
+  margin-top: 0.15rem;
+}
+.role-badge {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+.jump-arrow {
+  color: var(--text-muted);
+  font-size: 1.15rem;
+}
+
+/* ==========================================================================
+   SLIDE: SPEAKER & HOD & SINGLE FACULTY SPOTLIGHT LAYOUT
+   ========================================================================== */
+.slide-speaker-layout {
+  display: grid;
+  grid-template-columns: 530px 1fr;
+  gap: 4.5rem;
+  align-items: center;
+  width: 100%;
+  max-width: 1460px;
+}
+
+/* Left: Portrait Card */
+.speaker-left-card {
+  background: var(--bg-panel);
+  border: 2px solid var(--border-glass);
+  border-radius: 40px;
+  padding: 2.8rem 2.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.8), 0 0 60px rgba(79, 70, 229, 0.35);
+  backdrop-filter: blur(24px);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.speaker-left-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.85), 0 0 70px rgba(6, 182, 212, 0.45);
+}
+
+.speaker-photo-frame {
+  width: 370px;
+  height: 370px;
+  border-radius: 50%;
+  padding: 8px;
+  background: linear-gradient(135deg, #f59e0b 0%, #4f46e5 50%, #06b6d4 100%);
+  box-shadow: 0 0 60px rgba(245, 158, 11, 0.5), 0 0 90px rgba(6, 182, 212, 0.35);
+  margin-bottom: 1.75rem;
+  position: relative;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+.speaker-photo-frame:hover {
+  transform: scale(1.03);
+}
+
+.speaker-real-photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center center;
+  background: #ffffff;
+  display: block;
+}
+
+/* Chief Guest & HOD Placeholder Frame */
+.placeholder-frame {
+  background: rgba(255, 255, 255, 0.04);
+  border: 3px dashed var(--border-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 50px rgba(6, 182, 212, 0.4);
+}
+.photo-placeholder-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-cyan);
+  gap: 0.85rem;
+  padding: 1.5rem;
+}
+.ph-label {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #a5f3fc;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+.chief-guest-name-slot {
+  border: 2px dashed rgba(245, 158, 11, 0.45);
+  border-radius: 14px;
+  padding: 0.45rem 1.4rem;
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--text-gold) !important;
+}
+
+.speaker-display-name {
+  font-family: var(--font-display);
+  font-size: 2.35rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.15;
+  margin-bottom: 0.4rem;
+  letter-spacing: -0.01em;
+}
+
+.speaker-display-role {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-cyan);
+  margin-bottom: 1.1rem;
+}
+
+.hod-dept-badge-pill {
+  background: linear-gradient(135deg, #4f46e5, #06b6d4);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 1.15rem;
+  font-weight: 800;
+  padding: 0.45rem 1.8rem;
+  border-radius: 9999px;
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
+}
+
+/* Right: Agenda Content */
+.speaker-right-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.agenda-event-tag {
+  color: var(--text-gold);
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.6rem;
+  text-transform: uppercase;
+}
+
+.agenda-event-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 4.5vw, 4rem);
+  font-weight: 900;
+  line-height: 1.05;
+  color: #ffffff;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.subject-lead-intro-box {
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  border-radius: 12px;
+  padding: 0.45rem 1.2rem;
+  color: #fde68a;
+  font-size: 1.1rem;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.agenda-event-desc {
+  font-size: 1.45rem;
+  color: var(--text-silver);
+  line-height: 1.6;
+  margin-bottom: 2.2rem;
+}
+
+.speaker-quote-banner {
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.25) 0%, rgba(6, 182, 212, 0.18) 100%);
+  border-left: 6px solid var(--border-gold);
+  border-radius: 0 24px 24px 0;
+  padding: 1.75rem 2.4rem;
+  position: relative;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+}
+
+.quote-symbol {
+  font-family: var(--font-display);
+  font-size: 3.8rem;
+  color: var(--text-gold);
+  line-height: 1;
+  position: absolute;
+  top: 0.4rem;
+  left: 0.8rem;
+  opacity: 0.4;
+}
+
+.quote-text {
+  font-size: 1.4rem;
+  font-style: italic;
+  color: #fef08a;
+  line-height: 1.5;
+  position: relative;
+  z-index: 1;
+}
+
+/* ==========================================================================
+   SLIDE: MULTI-FACULTY SUBJECT-WISE LAYOUT (ENGLISH, MATHEMATICS, PHYSICS)
+   ========================================================================== */
+.slide-faculty-subject-layout {
+  width: 100%;
+  max-width: 1520px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.faculty-subject-header {
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subject-headline {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 3.8vw, 3.2rem);
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 0.25rem;
+}
+
+.subject-lead-intro {
+  font-size: 1.05rem;
+  color: var(--text-cyan);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.subject-quote-pill {
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.22) 0%, rgba(6, 182, 212, 0.15) 100%);
+  border-left: 4px solid var(--border-gold);
+  border-radius: 12px;
+  padding: 0.45rem 1.4rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  margin-top: 0.2rem;
+}
+
+.quote-icon {
+  color: var(--text-gold);
+  font-size: 1.4rem;
+  font-family: var(--font-display);
+  line-height: 1;
+}
+
+.quote-msg {
+  font-size: 1.05rem;
+  font-style: italic;
+  color: #fef08a;
+}
+
+/* Dynamic Rows for faculty members depending on count */
+.faculty-members-row {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  width: 100%;
+  max-height: calc(100vh - 270px);
+  overflow-y: auto;
+  padding: 0.4rem;
+}
+
+/* 2 Members (English, Physics) -> 250px photo */
+.faculty-members-row.count-2 {
+  gap: 3rem;
+}
+.faculty-members-row.count-2 .faculty-spotlight-card {
+  width: 420px;
+  padding: 2.2rem 1.8rem;
+}
+.faculty-members-row.count-2 .faculty-spotlight-frame {
+  width: 250px;
+  height: 250px;
+}
+.faculty-members-row.count-2 .faculty-spotlight-name {
+  font-size: 1.75rem;
+}
+.faculty-members-row.count-2 .faculty-spotlight-role {
+  font-size: 1.15rem;
+}
+
+/* 5 Members (Mathematics) -> 185px photo across full screen row */
+.faculty-members-row.count-5 {
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.faculty-members-row.count-5 .faculty-spotlight-card {
+  flex: 1;
+  max-width: 280px;
+  padding: 1.4rem 0.75rem;
+}
+.faculty-members-row.count-5 .faculty-spotlight-frame {
+  width: 185px;
+  height: 185px;
+  margin-bottom: 0.85rem;
+}
+.faculty-members-row.count-5 .faculty-spotlight-name {
+  font-size: 1.22rem;
+  min-height: 2.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.faculty-members-row.count-5 .faculty-spotlight-role {
+  font-size: 0.92rem;
+}
+
+.faculty-spotlight-card {
+  background: var(--bg-panel);
+  border: 2px solid var(--border-glass);
+  border-radius: 36px;
+  padding: 1.8rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75), 0 0 45px rgba(79, 70, 229, 0.25);
+  backdrop-filter: blur(20px);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.faculty-spotlight-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-cyan);
+}
+
+.faculty-spotlight-frame {
+  border-radius: 50%;
+  padding: 6px;
+  background: linear-gradient(135deg, #f59e0b, #06b6d4);
+  box-shadow: 0 0 35px rgba(245, 158, 11, 0.4);
+  margin-bottom: 1.15rem;
+  flex-shrink: 0;
+}
+
+.faculty-spotlight-name {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+  margin-bottom: 0.35rem;
+}
+
+.ph-name-tag {
+  color: var(--text-muted);
+  border: 1px dashed rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  padding: 0.3rem 0.8rem;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.faculty-spotlight-role {
+  font-size: 1.05rem;
+  color: var(--text-cyan);
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   SLIDE: FEATURE LAYOUT (ALUMNI, PRIZES)
+   ========================================================================== */
+.slide-feature-layout {
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.feature-role-subtitle {
+  font-size: 1.4rem;
+  color: var(--text-cyan);
+  font-weight: 700;
+  margin-bottom: 2.2rem;
+}
+
+.feature-points-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.6rem;
+  text-align: left;
+}
+
+.feature-point-item {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-glass);
+  border-radius: 20px;
+  padding: 1.6rem 2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.point-bullet {
+  color: var(--text-gold);
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.point-text {
+  font-size: 1.25rem;
+  color: var(--text-silver);
+  line-height: 1.55;
+}
+
+/* ==========================================================================
+   DISCREET FLOATING PRESENTER HUD
+   ========================================================================== */
+.floating-stage-hud {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 2rem;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(5, 7, 20, 0.85);
+  border: 1px solid var(--border-glass);
+  border-radius: 9999px;
+  padding: 0.4rem 0.6rem;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  opacity: 0.75;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.floating-stage-hud:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.hud-nav-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-glass);
+  color: #fff;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.hud-nav-btn:hover {
+  background: linear-gradient(135deg, #4f46e5, #06b6d4);
+  border-color: transparent;
+  transform: scale(1.08);
+}
+
+.hud-counter-pill {
+  font-family: var(--font-mono);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-gold);
+  padding: 0.2rem 0.6rem;
+  cursor: pointer;
+}
+.hud-counter-pill:hover {
+  color: #fff;
+}
+
+.hud-fs-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-glass);
+  color: var(--text-silver);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.hud-fs-btn:hover {
+  background: rgba(245, 158, 11, 0.3);
+  border-color: var(--border-gold);
+  color: #fff;
+  transform: scale(1.08);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .slide-speaker-layout {
+    grid-template-columns: 400px 1fr;
+    gap: 2.5rem;
+  }
+  .speaker-photo-frame {
+    width: 280px;
+    height: 280px;
+  }
+  .faculty-members-row.count-5 {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 850px) {
+  .slide-speaker-layout {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    overflow-y: auto;
+  }
+  .speaker-left-card {
+    padding: 1.5rem;
+  }
+  .speaker-photo-frame {
+    width: 220px;
+    height: 220px;
+  }
+  .agenda-table-grid, .feature-points-grid {
+    grid-template-columns: 1fr;
+  }
+}
