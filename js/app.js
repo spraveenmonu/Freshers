@@ -31,14 +31,15 @@ const SLIDES = [
       { time: "10.30 AM", event: "Prayer", person: "Mr. S. Stephen", role: "Vice Chairman, GCOE", slideIdx: 2 },
       { time: "10.40 AM", event: "Welcome Address", person: "Dr. M. D. Mohan Gift", role: "Vice Principal, GCOE", slideIdx: 3 },
       { time: "10.55 AM", event: "Presidential Address", person: "Mr. C. M. Joshua", role: "Chairman, GCOE", slideIdx: 4 },
-      { time: "11.15 AM", event: "Inaugural Address", person: "[ Chief Guest ]", role: "Chief Guest & Keynote Speaker", slideIdx: 5 },
-      { time: "11.40 AM", event: "Orientation", person: "Dr. S. Sidhardhan", role: "Principal, GCOE", slideIdx: 6 },
-      { time: "12.05 PM", event: "Alumni & Present Learner Insights", person: "Alumni & Student Representatives", role: "GCOE", slideIdx: 7 },
-      { time: "12.25 PM", event: "HOD’s Introduction", person: "Heads of Departments", role: "Engineering, MBA & H&S", slideIdx: 8 },
-      { time: "12.40 PM", event: "Introduction of First Year Faculties", person: "Dr. J. Antony Rex Rodrigo", role: "HOD / H&S", slideIdx: 16 },
-      { time: "12.55 PM", event: "Department of Management Studies", person: "Dr. Sivakumar", role: "HOD / MBA", slideIdx: 23 },
-      { time: "01.10 PM", event: "Prize Distribution", person: "Management & Dignitaries", role: "Merit Awards", slideIdx: 24 },
-      { time: "01.30 PM", event: "Vote of Thanks", person: "Dr. R. Jaqulin Isabella", role: "AP / Tamil", slideIdx: 25 }
+      { time: "11.15 AM", event: "Inaugural Address", person: "R. Shiva Prasad IPS", role: "Superintendent of Police", slideIdx: 5 },
+      { time: "11.35 AM", event: "Special Invitee Address", person: "Mr. R. Joshua Arul Kumar", role: "Manager-Operations, Rane", slideIdx: 6 },
+      { time: "11.50 AM", event: "Orientation", person: "Dr. S. Sidhardhan", role: "Principal, GCOE", slideIdx: 7 },
+      { time: "12.10 PM", event: "HOD’s Introduction & Dept Showcases", person: "Heads of Departments", role: "Engineering, MBA & H&S", slideIdx: 8 },
+      { time: "12.45 PM", event: "Introduction of First Year Faculties", person: "Dr. J. Antony Rex Rodrigo", role: "HOD / H&S", slideIdx: 19 },
+      { time: "01.05 PM", event: "Department of Management Studies", person: "Dr. Sivakumar", role: "HOD / MBA", slideIdx: 17 },
+      { time: "01.15 PM", event: "Prize Distribution", person: "Management & Dignitaries", role: "Merit Awards", slideIdx: 26 },
+      { time: "01.25 PM", event: "Alumni & Present Learner Insights", person: "Alumni & Student Representatives", role: "GCOE", slideIdx: 27 },
+      { time: "01.35 PM", event: "Vote of Thanks", person: "Dr. R. Jaqulin Isabella", role: "AP / Tamil", slideIdx: 28 }
     ]
   },
 
@@ -81,18 +82,47 @@ const SLIDES = [
     quote: "“At Grace, we cultivate visionaries, innovators, and leaders who will build tomorrow's world.”"
   },
 
-  // 5. Chief Guest Inaugural Address
+  // 5. Chief Guest Inaugural Address - R. Shiva Prasad IPS
   {
     id: "chief-guest",
-    type: "chief-guest",
+    type: "speaker",
     agendaEvent: "INAUGURAL ADDRESS",
-    name: "[ Chief Guest Name ]",
-    role: "Chief Guest & Eminent Keynote Speaker",
-    description: "Inaugural address illuminating emerging technologies, engineering frontiers, academic mindset, and industry readiness.",
-    quote: "“The future belongs to those who embrace continuous learning, curiosity, and technological innovation.”"
+    badgeLabel: "★ CHIEF GUEST & KEYNOTE SPEAKER",
+    name: "R. Shiva Prasad IPS",
+    role: "Superintendent of Police, Thoothukudi Dist.",
+    image: "assets/images/speakers/shiva_prasad.png",
+    fallback: "Screenshots/R. Shiva Prasad.jpeg",
+    description: "Inaugural address illuminating emerging technologies, discipline, societal impact, ethical leadership, and empowering youth readiness.",
+    quote: "“Discipline, dedication, and knowledge are the ultimate superpowers that turn young scholars into national changemakers.”"
   },
 
-  // 6. Principal Orientation
+  // 6. Special Invitee Slide - R. Joshua Arul Kumar
+  {
+    id: "special-invitee",
+    type: "special-invitee",
+    agendaEvent: "SPECIAL INVITEE ADDRESS",
+    badgeLabel: "★ SPECIAL INVITEE",
+    name: "Mr. R. Joshua Arul Kumar",
+    role: "Manager - Operations, Rane Vidyalaya Schools",
+    isPlaceholder: true,
+    placeholderLabel: "PHOTO WILL BE UPDATED",
+    careerHistory: [
+      {
+        period: "15 May 2021 – 31st May 2026",
+        role: "Principal",
+        org: "Rane Polytechnic, Trichy"
+      },
+      {
+        period: "From June 2026 – Present",
+        role: "Manager - Operations",
+        org: "Rane Vidyalaya Schools"
+      }
+    ],
+    description: "Special address bringing rich leadership perspectives on industrial-academic symbiosis, career trajectory, operational excellence, and holistic student growth.",
+    quote: "“Continuous learning, strong foundational values, and technical agility are the keys to building an enduring career in modern industry.”"
+  },
+
+  // 7. Principal Orientation
   {
     id: "sidhardhan",
     type: "speaker",
@@ -105,36 +135,75 @@ const SLIDES = [
     quote: "“Excellence is not an act, but a habit. Welcome to four transformative years of learning and discovery.”"
   },
 
-  // 7. Alumni & Present Learner Insights
+  // =========================================================================
+  // 8. CSE DEPARTMENT SHOWCASE (ORDER: FLYER -> CONTENT & ACHIEVEMENTS -> HOD)
+  // =========================================================================
+  // 8a. CSE Department Flyer & Placement Track Record
   {
-    id: "alumni",
-    type: "feature",
-    agendaEvent: "ALUMNI INSIGHTS & PRESENT LEARNER INSIGHTS",
-    title: "Alumni Insights & Present Learner Insights",
-    role: "GCOE Alumni Network & Senior Student Leaders",
-    points: [
-      "Inspiring career journeys and industry experiences shared by distinguished alumni",
-      "Practical tips for freshers on coursework, competitive coding, hackathons, and projects",
-      "Senior student perspectives on campus clubs, cultural forums, and sports activities",
-      "Peer mentorship support system to help new students excel from Day 1"
-    ]
+    id: "cse-flyer",
+    type: "dept-flyer",
+    agendaEvent: "DEPARTMENT SPOTLIGHT • COMPUTER SCIENCE & ENGINEERING",
+    deptCode: "CSE",
+    deptName: "Department of Computer Science and Engineering",
+    flyerImage: "assets/images/departments/cse_page_1.webp",
+    fallbackFlyer: "assets/images/departments/cse_page_1.png",
+    badge: "16 Years of Excellence",
+    stats: [
+      { value: "80%", label: "Placement On-Campus" },
+      { value: "3.6 LPA", label: "Average Package" },
+      { value: "25+", label: "IT & Non-IT Recruiters" }
+    ],
+    bullets: [
+      "Tech-enabled & Practice Oriented Learning Platforms: Infosys Springboard, IBM SkillsBuild, Naan Mudhalvan, GUVI, NPTEL.",
+      "Live Student Innovation Projects: Hostel Inventory Management, University ExamSoft, Home Automation, Grace Desk, GPS Tracking & Library Management System.",
+      "State-of-the-Art Infrastructure: High-speed computing labs, smart air-conditioned digital learning spaces, and comprehensive online resources."
+    ],
+    recruiters: ["Infosys", "TCS", "HCLTech", "Foxconn", "Literact", "DigiSailor", "Jilaba", "Palnar"]
   },
 
-  // =========================================================================
-  // 8. SEPARATE SLIDES FOR EACH AND EVERY HOD (NEXT BY NEXT IN ORDER)
-  // =========================================================================
+  // 8b. CSE Content & Notable Achievements
+  {
+    id: "cse-achievements",
+    type: "dept-flyer",
+    agendaEvent: "DEPARTMENT ACHIEVEMENTS • COMPUTER SCIENCE & ENGINEERING",
+    deptCode: "CSE",
+    deptName: "CSE Focus Areas, Research & Honors",
+    flyerImage: "assets/images/departments/cse_page_2.webp",
+    fallbackFlyer: "assets/images/departments/cse_page_2.png",
+    badge: "Academic & Research Milestones",
+    stats: [
+      { value: "12 LPA", label: "Top Placement Record" },
+      { value: "TNSCST", label: "Funded Research Projects" },
+      { value: "CM Trophy", label: "Bronze Medal Winner" }
+    ],
+    bullets: [
+      "Centre of Excellence in Internet of Things (IoT) driving hands-on smart embedded systems and sensors.",
+      "Professional Development & Industry Networking: Language and cultural exchange programs, hackathons, and corporate forums.",
+      "State-level & National symposium winners; recognized by MoE's Innovation Cell, Institution's Innovation Council (IIC), and IQAC.",
+      "Degrees Offered: Undergraduate B.E. (Computer Science & Engg) & Postgraduate M.E. (Computer Science & Engg)."
+    ],
+    recruiters: ["Rinex", "Thozhil", "Roriri Software", "Shloklabs", "Space Zee", "Webberax"]
+  },
+
+  // 8c. CSE HOD Profile - Dr. I. Felcia Jerlin
   {
     id: "hod-cse",
     type: "hod-single",
     agendaEvent: "HOD INTRODUCTION • COMPUTER SCIENCE & ENGINEERING",
     deptCode: "CSE",
     deptName: "Department of Computer Science & Engineering",
-    name: "[ HOD / CSE Name ]",
-    role: "Head of Department (HOD)",
-    isPlaceholder: true,
-    description: "Leading cutting-edge education in software engineering, algorithms, cloud computing, cybersecurity, and emerging technologies.",
-    quote: "“Empowering code craftsmen and architects of the intelligent digital era.”"
+    name: "Dr. I. Felcia Jerlin",
+    role: "Head of the Department (HOD) - CSE",
+    image: "assets/images/speakers/felcia_jerlin.png",
+    fallback: "Screenshots/Grace College CSE - HoD Profile Flyer (1).jpg.jpeg",
+    isPlaceholder: false,
+    description: "Dr. I. Felcia Jerlin is an Assistant Professor & HOD in CSE, specializing in Data Structures, Operating Systems, and UI/UX Design. She earned her Ph.D. from Anna University, Chennai, publishing extensively in premier international journals.",
+    quote: "“We are committed to empowering students with the skills to create meaningful digital experiences, integrating creativity, empathy, and problem-solving for real-world impact.”"
   },
+
+  // =========================================================================
+  // 9. AI & DS DEPARTMENT
+  // =========================================================================
   {
     id: "hod-aids",
     type: "hod-single",
@@ -147,18 +216,52 @@ const SLIDES = [
     description: "Pioneering intelligent systems, machine learning architectures, big data analytics, deep learning models, and computer vision.",
     quote: "“Shaping the intelligence of tomorrow through data-driven innovation.”"
   },
+
+  // =========================================================================
+  // 10. ECE DEPARTMENT SHOWCASE & HOD
+  // =========================================================================
+  // 10a. ECE Department Flyer & Highlights
+  {
+    id: "ece-flyer",
+    type: "dept-flyer",
+    agendaEvent: "DEPARTMENT SPOTLIGHT • ELECTRONICS & COMMUNICATION ENGINEERING",
+    deptCode: "ECE",
+    deptName: "Department of Electronics and Communication Engineering",
+    flyerImage: "assets/images/departments/ece_flyer.webp",
+    fallbackFlyer: "assets/images/departments/ece_flyer.png",
+    badge: "Where Electronics Meets Intelligence",
+    stats: [
+      { value: "94.4%", label: "Placement Success" },
+      { value: "17 / 18", label: "Graduates Placed" },
+      { value: "3D Print", label: "Student-Built Innovation" }
+    ],
+    bullets: [
+      "Engineering in Action: ECE students designed and developed a functional 3D printer entirely from scratch.",
+      "Advanced Practical Laboratories: Digital Signal Processing (DSP), Devices & Circuits, and Linear Integrated Circuits (LIC) equipped with state-of-the-art kits.",
+      "Thriving Core Careers: Government opportunities (ISRO, DRDO, BEL, BSNL, Railways) & Private giants (VLSI, IoT, 5G/6G, Robotics, Telecom, Automotive).",
+      "Philosophy: LEARN • DESIGN • BUILD • TEST • INNOVATE."
+    ],
+    recruiters: ["VLSI & Semiconductor", "Embedded Systems", "5G/6G Telecom", "Robotics & Automation"]
+  },
+
+  // 10b. ECE HOD Profile - Mrs. E.M. Uma Selvi
   {
     id: "hod-ece",
     type: "hod-single",
     agendaEvent: "HOD INTRODUCTION • ELECTRONICS & COMMUNICATION ENGINEERING",
     deptCode: "ECE",
     deptName: "Department of Electronics & Communication Engineering",
-    name: "[ HOD / ECE Name ]",
-    role: "Head of Department (HOD)",
+    name: "Mrs. E. M. Uma Selvi",
+    role: "Assistant Professor & Head of the Department (HOD) - ECE",
     isPlaceholder: true,
-    description: "Spearheading advanced VLSI design, embedded IoT systems, 5G wireless communications, robotics, and signal processing.",
-    quote: "“Connecting the globe through semiconductor precision and wireless innovation.”"
+    placeholderLabel: "PHOTO WILL BE UPDATED",
+    description: "M.E. Communication Systems with 14+ years of academic and research excellence. Spearheading student innovation, VLSI design, advanced wireless labs, and 94.4% placement record.",
+    quote: "“Connecting the globe through semiconductor precision, wireless innovation, and hands-on engineering excellence.”"
   },
+
+  // =========================================================================
+  // 11. EEE DEPARTMENT
+  // =========================================================================
   {
     id: "hod-eee",
     type: "hod-single",
@@ -171,6 +274,10 @@ const SLIDES = [
     description: "Empowering next-gen renewable energy systems, smart power grids, EV drive technologies, and industrial power automation.",
     quote: "“Powering sustainable futures with smart grid intelligence and clean energy.”"
   },
+
+  // =========================================================================
+  // 12. MECHANICAL ENGINEERING
+  // =========================================================================
   {
     id: "hod-mech",
     type: "hod-single",
@@ -183,6 +290,10 @@ const SLIDES = [
     description: "Driving innovation in computer-aided design & manufacturing (CAD/CAM), thermal engineering, mechatronics, and robotics.",
     quote: "“Transforming imagination into precision machines and robotic marvels.”"
   },
+
+  // =========================================================================
+  // 13. CIVIL ENGINEERING
+  // =========================================================================
   {
     id: "hod-civil",
     type: "hod-single",
@@ -195,6 +306,10 @@ const SLIDES = [
     description: "Mastering sustainable infrastructure design, structural engineering, smart environmental solutions, and modern construction management.",
     quote: "“Building enduring structures and green infrastructure for modern civilizations.”"
   },
+
+  // =========================================================================
+  // 14. DEPARTMENT OF MANAGEMENT STUDIES (MBA)
+  // =========================================================================
   {
     id: "hod-mba",
     type: "hod-single",
@@ -209,6 +324,10 @@ const SLIDES = [
     description: "Nurturing techno-managerial leaders, corporate strategists, entrepreneurs, and global business managers.",
     quote: "“Leadership and management acumen empower engineers to convert brilliant ideas into global enterprises.”"
   },
+
+  // =========================================================================
+  // 15. HUMANITIES & SCIENCES (H&S)
+  // =========================================================================
   {
     id: "hod-hs",
     type: "hod-single",
@@ -225,8 +344,9 @@ const SLIDES = [
   },
 
   // =========================================================================
-  // 9. FIRST YEAR FACULTIES (SEPARATE SINGLE SLIDE FOR EACH SUBJECT)
+  // 16. FIRST YEAR FACULTIES (SEPARATE SINGLE SLIDE FOR EACH SUBJECT)
   // =========================================================================
+  // 16a. Tamil
   {
     id: "faculty-tamil",
     type: "faculty-subject",
@@ -246,6 +366,8 @@ const SLIDES = [
       }
     ]
   },
+
+  // 16b. English (With Dyana Flora & E. Flora Jacob)
   {
     id: "faculty-english",
     type: "faculty-subject",
@@ -259,15 +381,21 @@ const SLIDES = [
       {
         name: "Ms. Dyana Flora",
         role: "Assistant Professor / English",
-        isPlaceholder: true
+        image: "assets/images/speakers/dyana_flora.png",
+        fallback: "Screenshots/Dyana flora.jpeg",
+        isPlaceholder: false
       },
       {
-        name: "Ms. Flora",
+        name: "Ms. E. Flora Jacob",
         role: "Assistant Professor / English",
-        isPlaceholder: true
+        image: "assets/images/speakers/flora_jacob.png",
+        fallback: "Screenshots/E. Flora Jacob.jpeg",
+        isPlaceholder: false
       }
     ]
   },
+
+  // 16c. Mathematics
   {
     id: "faculty-maths",
     type: "faculty-subject",
@@ -315,6 +443,8 @@ const SLIDES = [
       }
     ]
   },
+
+  // 16d. Physics
   {
     id: "faculty-physics",
     type: "faculty-subject",
@@ -326,14 +456,14 @@ const SLIDES = [
     quote: "“Physics illuminates the laws of nature and transforms pure scientific inquiry into transformative technology.”",
     members: [
       {
-        name: "Dr. Selvaprem Kumar",
+        name: "Mr. Selvaprem Kumar",
         role: "Assistant Professor / Physics",
         image: "assets/images/speakers/selvaprem_kumar.png",
         fallback: "Screenshots/Selvaprem kumar physics AP.jpeg",
         isPlaceholder: false
       },
       {
-        name: "Ms. Jini Kamal",
+        name: "Dr./Ms. Jini Kamal Eastro",
         role: "Assistant Professor / Physics",
         image: "assets/images/speakers/jini_kamal.png",
         fallback: "Screenshots/Jini kamal.jpeg",
@@ -341,6 +471,8 @@ const SLIDES = [
       }
     ]
   },
+
+  // 16e. Chemistry
   {
     id: "faculty-chemistry",
     type: "faculty-subject",
@@ -352,12 +484,16 @@ const SLIDES = [
     quote: "“Understanding molecular transformations is the gateway to developing next-generation sustainable materials.”",
     members: [
       {
-        name: "Dr. / Ms. Somasundari",
+        name: "Ms. G. Somasundari",
         role: "Assistant Professor / Chemistry",
-        isPlaceholder: true
+        image: "assets/images/speakers/somasundari.png",
+        fallback: "Screenshots/Somasundari.jpeg",
+        isPlaceholder: false
       }
     ]
   },
+
+  // 16f. Physical Education (PET)
   {
     id: "faculty-pet",
     type: "faculty-subject",
@@ -377,6 +513,8 @@ const SLIDES = [
       }
     ]
   },
+
+  // 16g. Library
   {
     id: "faculty-librarian",
     type: "faculty-subject",
@@ -397,8 +535,9 @@ const SLIDES = [
     ]
   },
 
-
-  // 11. Prize Distribution
+  // =========================================================================
+  // 17. PRIZE DISTRIBUTION
+  // =========================================================================
   {
     id: "prize",
     type: "feature",
@@ -413,7 +552,26 @@ const SLIDES = [
     ]
   },
 
-  // 12. Vote of Thanks
+  // =========================================================================
+  // 18. ALUMNI & PRESENT LEARNER INSIGHTS (MOVED TO BEFORE LAST PAGE)
+  // =========================================================================
+  {
+    id: "alumni",
+    type: "feature",
+    agendaEvent: "ALUMNI INSIGHTS & PRESENT LEARNER INSIGHTS",
+    title: "Alumni Insights & Present Learner Insights",
+    role: "GCOE Alumni Network & Senior Student Leaders",
+    points: [
+      "Inspiring career journeys and industry experiences shared by distinguished alumni",
+      "Practical tips for freshers on coursework, competitive coding, hackathons, and projects",
+      "Senior student perspectives on campus clubs, cultural forums, and sports activities",
+      "Peer mentorship support system to help new students excel from Day 1"
+    ]
+  },
+
+  // =========================================================================
+  // 19. VOTE OF THANKS (LAST PAGE)
+  // =========================================================================
   {
     id: "jaqulin-isabella",
     type: "speaker",
@@ -500,6 +658,7 @@ function renderSlide(index) {
           </div>
           <h2 class="speaker-display-name">${slide.name}</h2>
           <div class="speaker-display-role">${slide.role}</div>
+          ${slide.badgeLabel ? `<div class="special-invitee-badge">${slide.badgeLabel}</div>` : ''}
         </div>
 
         <div class="speaker-right-card">
@@ -514,32 +673,82 @@ function renderSlide(index) {
         </div>
       </div>
     `;
-  } else if (slide.type === 'chief-guest') {
+  } else if (slide.type === 'special-invitee') {
     html = `
       <div class="slide-speaker-layout">
-        <div class="speaker-left-card chief-guest-card">
+        <div class="speaker-left-card special-invitee-card">
           <div class="speaker-photo-frame placeholder-frame">
             <div class="photo-placeholder-content">
               <svg width="85" height="85" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                 <circle cx="12" cy="7" r="4"></circle>
               </svg>
-              <div class="ph-label">SPACE FOR CHIEF GUEST PHOTO</div>
+              <div class="ph-label">${slide.placeholderLabel || 'SPACE FOR PHOTO'}</div>
             </div>
           </div>
-          <div class="speaker-display-name chief-guest-name-slot">${slide.name}</div>
+          <h2 class="speaker-display-name chief-guest-name-slot">${slide.name}</h2>
           <div class="speaker-display-role">${slide.role}</div>
+          <div class="special-invitee-badge">★ SPECIAL INVITEE</div>
         </div>
 
         <div class="speaker-right-card">
-          <div class="agenda-event-tag">★ PROGRAM AGENDA • INAUGURAL ADDRESS</div>
+          <div class="agenda-event-tag">★ PROGRAM AGENDA • SPECIAL INVITEE</div>
           <h1 class="agenda-event-title">${slide.agendaEvent}</h1>
+          
+          <div class="special-career-timeline">
+            ${slide.careerHistory ? slide.careerHistory.map(item => `
+              <div class="timeline-item">
+                <div class="timeline-period">${item.period}</div>
+                <div class="timeline-role">${item.role}</div>
+                <div class="timeline-org">${item.org}</div>
+              </div>
+            `).join('') : ''}
+          </div>
+
           <p class="agenda-event-desc">${slide.description}</p>
           
           <div class="speaker-quote-banner">
             <div class="quote-symbol">“</div>
             <div class="quote-text">${slide.quote}</div>
           </div>
+        </div>
+      </div>
+    `;
+  } else if (slide.type === 'dept-flyer') {
+    html = `
+      <div class="slide-dept-flyer-layout">
+        <div class="dept-flyer-preview-card">
+          <img src="${slide.flyerImage}" alt="${slide.deptName}" class="dept-flyer-img" onerror="this.src='${slide.fallbackFlyer || ''}'" />
+        </div>
+
+        <div class="dept-flyer-info-card">
+          <div class="agenda-event-tag">★ ${slide.agendaEvent}</div>
+          <h1 class="agenda-event-title">${slide.deptName}</h1>
+          <div class="hod-dept-badge-pill" style="align-self: flex-start; margin: 0.5rem 0 1rem 0;">${slide.badge || slide.deptCode}</div>
+
+          <div class="dept-stats-row">
+            ${slide.stats ? slide.stats.map(st => `
+              <div class="dept-stat-box">
+                <div class="dept-stat-val">${st.value}</div>
+                <div class="dept-stat-lbl">${st.label}</div>
+              </div>
+            `).join('') : ''}
+          </div>
+
+          <div class="dept-bullet-list">
+            ${slide.bullets ? slide.bullets.map(b => `
+              <div class="dept-bullet-item">
+                <span class="dept-bullet-icon">✦</span>
+                <span>${b}</span>
+              </div>
+            `).join('') : ''}
+          </div>
+
+          ${slide.recruiters ? `
+            <div class="dept-recruiters-pill">
+              ${slide.recruiters.map(r => `<span class="recruiter-chip">${r}</span>`).join('')}
+            </div>
+          ` : ''}
         </div>
       </div>
     `;
@@ -554,7 +763,7 @@ function renderSlide(index) {
                   <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                   <circle cx="12" cy="7" r="4"></circle>
                 </svg>
-                <div class="ph-label">SPACE FOR ${slide.deptCode} HOD PHOTO</div>
+                <div class="ph-label">${slide.placeholderLabel || `SPACE FOR ${slide.deptCode} HOD PHOTO`}</div>
               </div>
             ` : `
               <img src="${slide.image}" alt="${slide.name}" class="speaker-real-photo" onerror="this.src='${slide.fallback || 'Screenshots/Stephen.png'}'" />
@@ -678,6 +887,31 @@ function renderSlide(index) {
   }
 
   stage.innerHTML = html;
+
+  // AUTO-FIT SCALER: Guarantee every slide fits within viewport (zero scrolling)
+  requestAnimationFrame(() => {
+    const wrapper = stage;
+    const child = wrapper.firstElementChild;
+    if (!child) return;
+    
+    // Reset any previous scale
+    child.style.transform = '';
+    child.style.transformOrigin = 'center center';
+    
+    const viewH = window.innerHeight - 24; // small margin for HUD
+    const viewW = wrapper.offsetWidth;
+    const contentH = child.scrollHeight;
+    const contentW = child.scrollWidth;
+    
+    const scaleY = contentH > viewH ? viewH / contentH : 1;
+    const scaleX = contentW > viewW ? viewW / contentW : 1;
+    const scale = Math.min(scaleY, scaleX, 1);
+    
+    if (scale < 1) {
+      child.style.transform = `scale(${scale.toFixed(4)})`;
+      child.style.transformOrigin = 'center top';
+    }
+  });
 }
 
 function nextSlide() {
