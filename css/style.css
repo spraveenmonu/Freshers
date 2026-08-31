@@ -12,7 +12,7 @@
   --border-gold: #f59e0b;
   --border-cyan: #06b6d4;
   --border-glass: rgba(255, 255, 255, 0.15);
-  
+
   --text-gold: #fbbf24;
   --text-cyan: #38bdf8;
   --text-white: #ffffff;
@@ -24,19 +24,23 @@
   --font-mono: 'Space Grotesk', monospace;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
   overflow: hidden;
   background-color: var(--bg-dark);
   font-family: var(--font-body);
   color: var(--text-white);
+  -webkit-user-select: none;
   user-select: none;
   -webkit-font-smoothing: antialiased;
 }
@@ -57,16 +61,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem 2.5rem;
+  padding: 1.25rem 2rem;
   position: relative;
   overflow: hidden;
 }
 
 .stage-card-wrapper {
   width: 100%;
-  max-width: 1520px;
+  max-width: 96vw;
   height: 100%;
-  max-height: 900px;
+  max-height: 96vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -81,12 +85,13 @@ body {
   background: var(--bg-panel);
   border: 2px solid var(--border-glass);
   border-radius: 40px;
-  padding: 3rem 3.5rem;
+  padding: 2.75rem 3.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   box-shadow: 0 35px 80px rgba(0, 0, 0, 0.85), 0 0 70px rgba(79, 70, 229, 0.4);
+  -webkit-backdrop-filter: blur(25px);
   backdrop-filter: blur(25px);
   position: relative;
 }
@@ -127,7 +132,7 @@ body {
   font-size: 1.05rem;
   color: var(--text-muted);
   font-weight: 500;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .cover-center-box {
@@ -135,7 +140,7 @@ body {
   border: 1px solid rgba(6, 182, 212, 0.35);
   border-radius: 24px;
   padding: 1.25rem 2.5rem;
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -181,7 +186,7 @@ body {
   font-family: var(--font-mono);
   font-size: 1rem;
   color: var(--text-gold);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .cover-cta-row {
@@ -199,14 +204,17 @@ body {
   box-shadow: 0 10px 30px rgba(6, 182, 212, 0.4);
   transition: all 0.25s ease;
 }
+
 .cover-cta-row:hover {
   transform: scale(1.05);
   box-shadow: 0 15px 40px rgba(6, 182, 212, 0.6);
 }
+
 .cta-arrow {
   font-size: 1.3rem;
   transition: transform 0.2s ease;
 }
+
 .cover-cta-row:hover .cta-arrow {
   transform: translateX(4px);
 }
@@ -249,6 +257,7 @@ body {
   color: var(--text-cyan);
   font-weight: 700;
 }
+
 .agenda-venue {
   font-size: 0.88rem;
   color: var(--text-muted);
@@ -275,8 +284,10 @@ body {
   gap: 1rem;
   cursor: pointer;
   transition: all 0.22s ease;
+  -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
 }
+
 .agenda-table-row:hover {
   border-color: var(--border-cyan);
   background: rgba(79, 70, 229, 0.35);
@@ -299,18 +310,21 @@ body {
 .event-col {
   flex: 1;
 }
+
 .event-name {
   font-size: 1.05rem;
   font-weight: 700;
   color: #fff;
   line-height: 1.2;
 }
+
 .person-name {
   font-size: 0.88rem;
   color: var(--text-cyan);
   font-weight: 600;
   margin-top: 0.1rem;
 }
+
 .role-badge {
   color: var(--text-muted);
   font-size: 0.82rem;
@@ -323,64 +337,75 @@ body {
 }
 
 /* ==========================================================================
-   SLIDE: SPEAKER & HOD & SINGLE FACULTY SPOTLIGHT LAYOUT
+   SLIDE: SPEAKER & HOD & SINGLE FACULTY SPOTLIGHT LAYOUT (50/50 SPLIT)
    ========================================================================== */
 .slide-speaker-layout {
   display: grid;
-  grid-template-columns: 530px 1fr;
-  gap: 4.5rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
   align-items: center;
   width: 100%;
-  max-width: 1460px;
+  max-width: 1480px;
+  margin: 0 auto;
 }
 
-/* Left: Portrait Card */
+/* Left: Portrait Box / Card (Covering Left 50%) */
 .speaker-left-card {
   background: var(--bg-panel);
   border: 2px solid var(--border-glass);
-  border-radius: 40px;
-  padding: 2.8rem 2.2rem;
+  border-radius: 36px;
+  padding: 2.2rem 2rem 1.8rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
   box-shadow: 0 30px 70px rgba(0, 0, 0, 0.8), 0 0 60px rgba(79, 70, 229, 0.35);
+  -webkit-backdrop-filter: blur(24px);
   backdrop-filter: blur(24px);
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
 }
+
 .speaker-left-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 35px 80px rgba(0, 0, 0, 0.85), 0 0 70px rgba(6, 182, 212, 0.45);
 }
 
+/* Enlarged Circular Image Frame */
 .speaker-photo-frame {
-  width: 370px;
-  height: 370px;
+  width: clamp(340px, 28vw, 410px);
+  height: clamp(340px, 28vw, 410px);
   border-radius: 50%;
   padding: 8px;
   background: linear-gradient(135deg, #f59e0b 0%, #4f46e5 50%, #06b6d4 100%);
-  box-shadow: 0 0 60px rgba(245, 158, 11, 0.5), 0 0 90px rgba(6, 182, 212, 0.35);
-  margin-bottom: 1.75rem;
+  box-shadow: 0 0 50px rgba(245, 158, 11, 0.5), 0 0 80px rgba(6, 182, 212, 0.35);
+  margin-bottom: 1.25rem;
   position: relative;
   flex-shrink: 0;
   transition: transform 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .speaker-photo-frame:hover {
   transform: scale(1.03);
 }
 
+/* Image centered alignment inside circle */
 .speaker-real-photo {
   width: 100%;
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
   object-position: center center;
-  background: #ffffff;
   display: block;
 }
 
-/* Chief Guest & HOD Placeholder Frame */
+/* Chief Guest & HOD & Special Invitee Placeholder Frame */
 .placeholder-frame {
   background: rgba(255, 255, 255, 0.04);
   border: 3px dashed var(--border-cyan);
@@ -389,6 +414,7 @@ body {
   justify-content: center;
   box-shadow: 0 0 50px rgba(6, 182, 212, 0.4);
 }
+
 .photo-placeholder-content {
   display: flex;
   flex-direction: column;
@@ -398,9 +424,10 @@ body {
   gap: 0.85rem;
   padding: 1.5rem;
 }
+
 .ph-label {
   font-family: var(--font-mono);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: #a5f3fc;
   letter-spacing: 0.08em;
@@ -417,56 +444,59 @@ body {
 
 .speaker-display-name {
   font-family: var(--font-display);
-  font-size: 2.35rem;
+  font-size: 2.2rem;
   font-weight: 800;
   color: #ffffff;
   line-height: 1.15;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.3rem;
   letter-spacing: -0.01em;
 }
 
 .speaker-display-role {
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: var(--text-cyan);
-  margin-bottom: 1.1rem;
+  margin-bottom: 0.8rem;
 }
 
 .hod-dept-badge-pill {
   background: linear-gradient(135deg, #4f46e5, #06b6d4);
   color: #fff;
   font-family: var(--font-mono);
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-weight: 800;
-  padding: 0.45rem 1.8rem;
+  padding: 0.4rem 1.6rem;
   border-radius: 9999px;
   box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
 }
 
-/* Right: Agenda Content */
+/* Right: Agenda Content Box (Covering Right 50%) */
 .speaker-right-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: left;
 }
 
 .agenda-event-tag {
   color: var(--text-gold);
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 800;
   letter-spacing: 0.12em;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.4rem;
   text-transform: uppercase;
+  text-align: left;
 }
 
 .agenda-event-title {
   font-family: var(--font-display);
-  font-size: clamp(2.6rem, 4.5vw, 4rem);
+  font-size: clamp(2.2rem, 3.8vw, 3.4rem);
   font-weight: 900;
-  line-height: 1.05;
+  line-height: 1.1;
   color: #ffffff;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.8rem;
   letter-spacing: -0.02em;
+  text-align: left;
 }
 
 .subject-lead-intro-box {
@@ -477,43 +507,63 @@ body {
   color: #fde68a;
   font-size: 1.1rem;
   display: inline-block;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
+  text-align: left;
 }
 
 .agenda-event-desc {
-  font-size: 1.45rem;
+  font-size: 1.15rem;
   color: var(--text-silver);
   line-height: 1.6;
-  margin-bottom: 2.2rem;
+  margin-bottom: 1.2rem;
+  text-align: left;
 }
 
 .speaker-quote-banner {
   background: linear-gradient(135deg, rgba(79, 70, 229, 0.25) 0%, rgba(6, 182, 212, 0.18) 100%);
-  border-left: 6px solid var(--border-gold);
-  border-radius: 0 24px 24px 0;
-  padding: 1.75rem 2.4rem;
+  border-left: 5px solid var(--border-gold);
+  border-radius: 0 20px 20px 0;
+  padding: 1.2rem 1.8rem;
   position: relative;
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
 }
 
 .quote-symbol {
   font-family: var(--font-display);
-  font-size: 3.8rem;
+  font-size: 3rem;
   color: var(--text-gold);
   line-height: 1;
   position: absolute;
-  top: 0.4rem;
-  left: 0.8rem;
+  top: 0.3rem;
+  left: 0.6rem;
   opacity: 0.4;
 }
 
 .quote-text {
-  font-size: 1.4rem;
+  font-size: 1.15rem;
   font-style: italic;
   color: #fef08a;
-  line-height: 1.5;
+  line-height: 1.45;
   position: relative;
   z-index: 1;
+}
+
+.hod-highlights-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.hod-highlight-badge {
+  background: rgba(6, 182, 212, 0.15);
+  border: 1px solid rgba(6, 182, 212, 0.4);
+  color: var(--text-cyan);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
 }
 
 /* ==========================================================================
@@ -529,7 +579,7 @@ body {
 }
 
 .faculty-subject-header {
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.75rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -537,45 +587,45 @@ body {
 
 .subject-headline {
   font-family: var(--font-display);
-  font-size: clamp(2.4rem, 3.8vw, 3.2rem);
+  font-size: clamp(2.1rem, 3.4vw, 2.8rem);
   font-weight: 900;
   color: #ffffff;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.2rem;
 }
 
 .subject-lead-intro {
-  font-size: 1.05rem;
+  font-size: 1rem;
   color: var(--text-cyan);
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.35rem;
 }
 
 .subject-quote-pill {
   background: linear-gradient(135deg, rgba(79, 70, 229, 0.22) 0%, rgba(6, 182, 212, 0.15) 100%);
   border-left: 4px solid var(--border-gold);
   border-radius: 12px;
-  padding: 0.45rem 1.4rem;
+  padding: 0.4rem 1.3rem;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
-  margin-top: 0.2rem;
+  margin-top: 0.15rem;
 }
 
 .quote-icon {
   color: var(--text-gold);
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-family: var(--font-display);
   line-height: 1;
 }
 
 .quote-msg {
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-style: italic;
   color: #fef08a;
 }
 
-/* Dynamic Rows for faculty members depending on count */
+/* Dynamic Rows for faculty members */
 .faculty-members-row {
   display: flex;
   justify-content: center;
@@ -583,55 +633,64 @@ body {
   gap: 1.5rem;
   flex-wrap: wrap;
   width: 100%;
-  max-height: calc(100vh - 270px);
+  max-height: calc(100vh - 210px);
   overflow-y: auto;
   padding: 0.4rem;
 }
 
-/* 2 Members (English, Physics) -> 250px photo */
+/* 2 Members (English, Physics) -> 230px photo frame, fits vertically without scrolling */
 .faculty-members-row.count-2 {
-  gap: 3rem;
-}
-.faculty-members-row.count-2 .faculty-spotlight-card {
-  width: 420px;
-  padding: 2.2rem 1.8rem;
-}
-.faculty-members-row.count-2 .faculty-spotlight-frame {
-  width: 250px;
-  height: 250px;
-}
-.faculty-members-row.count-2 .faculty-spotlight-name {
-  font-size: 1.75rem;
-}
-.faculty-members-row.count-2 .faculty-spotlight-role {
-  font-size: 1.15rem;
+  gap: 2.5rem;
 }
 
-/* 5 Members (Mathematics) -> 185px photo across full screen row */
+.faculty-members-row.count-2 .faculty-spotlight-card {
+  width: 380px;
+  padding: 1.5rem 1.4rem;
+}
+
+.faculty-members-row.count-2 .faculty-spotlight-frame {
+  width: 230px;
+  height: 230px;
+  margin-bottom: 0.9rem;
+}
+
+.faculty-members-row.count-2 .faculty-spotlight-name {
+  font-size: 1.6rem;
+}
+
+.faculty-members-row.count-2 .faculty-spotlight-role {
+  font-size: 1.05rem;
+}
+
+/* 5 Members (Mathematics) -> 195px photo across full screen row */
 .faculty-members-row.count-5 {
-  gap: 1rem;
+  gap: 1.1rem;
   justify-content: center;
   flex-wrap: nowrap;
 }
+
 .faculty-members-row.count-5 .faculty-spotlight-card {
   flex: 1;
-  max-width: 280px;
+  max-width: 290px;
   padding: 1.4rem 0.75rem;
 }
+
 .faculty-members-row.count-5 .faculty-spotlight-frame {
-  width: 185px;
-  height: 185px;
+  width: 195px;
+  height: 195px;
   margin-bottom: 0.85rem;
 }
+
 .faculty-members-row.count-5 .faculty-spotlight-name {
-  font-size: 1.22rem;
+  font-size: 1.25rem;
   min-height: 2.7rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .faculty-members-row.count-5 .faculty-spotlight-role {
-  font-size: 0.92rem;
+  font-size: 0.95rem;
 }
 
 .faculty-spotlight-card {
@@ -644,9 +703,11 @@ body {
   align-items: center;
   text-align: center;
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75), 0 0 45px rgba(79, 70, 229, 0.25);
+  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   transition: transform 0.3s ease, border-color 0.3s ease;
 }
+
 .faculty-spotlight-card:hover {
   transform: translateY(-4px);
   border-color: var(--border-cyan);
@@ -659,6 +720,19 @@ body {
   box-shadow: 0 0 35px rgba(245, 158, 11, 0.4);
   margin-bottom: 1.15rem;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.faculty-spotlight-frame img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
 }
 
 .faculty-spotlight-name {
@@ -717,9 +791,11 @@ body {
   align-items: flex-start;
   gap: 1rem;
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
   transition: transform 0.25s ease, border-color 0.25s ease;
 }
+
 .feature-point-item:hover {
   border-color: var(--border-gold);
   transform: translateY(-3px);
@@ -761,7 +837,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
-  margin: 0.8rem 0;
+  margin: 0.6rem 0;
   text-align: left;
 }
 
@@ -769,7 +845,7 @@ body {
   background: rgba(255, 255, 255, 0.05);
   border-left: 3px solid var(--border-gold);
   border-radius: 12px;
-  padding: 0.6rem 1rem;
+  padding: 0.55rem 0.9rem;
 }
 
 .timeline-period {
@@ -781,7 +857,7 @@ body {
 }
 
 .timeline-role {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: #fff;
 }
@@ -792,102 +868,129 @@ body {
 }
 
 /* ==========================================================================
-   DEPARTMENT FLYER & SHOWCASE STYLES (CSE / ECE)
+   DEPARTMENT FLYER & SHOWCASE STYLES (CSE / ECE / EEE) - 50/50 HALF PAGE SPLIT
    ========================================================================== */
 .slide-dept-flyer-layout {
   width: 100%;
-  max-width: 1460px;
+  max-width: 1520px;
+  height: 94vh;
   display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap: 3rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
   align-items: center;
+  justify-content: center;
+  margin: 0 auto;
 }
 
+/* Left Half: Flyer Preview Card (50% Width) */
 .dept-flyer-preview-card {
   position: relative;
   background: var(--bg-panel);
   border: 2px solid var(--border-glass);
   border-radius: 28px;
-  padding: 0.75rem;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85), 0 0 50px rgba(79, 70, 229, 0.3);
+  padding: 0.5rem;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85), 0 0 50px rgba(79, 70, 229, 0.35);
+  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   overflow: hidden;
-  max-height: 90vh;
+  height: 100%;
+  max-height: 88vh;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
 }
 
 .dept-flyer-img {
   width: 100%;
-  height: auto;
-  max-height: 88vh;
+  height: 100%;
+  max-height: 86vh;
   object-fit: contain;
-  border-radius: 18px;
+  object-position: center center;
+  border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease;
+  display: block;
+  margin: 0 auto;
 }
+
 .dept-flyer-img:hover {
   transform: scale(1.02);
 }
 
+/* Right Half: Dept Info Card (50% Width, Elevated Upwards, Perfectly Fitted) */
 .dept-flyer-info-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: left;
+  max-height: 88vh;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.slide-dept-flyer-layout .agenda-event-tag {
+  margin-bottom: 0.3rem;
+  font-size: 0.92rem;
+}
+
+.slide-dept-flyer-layout .agenda-event-title {
+  font-size: clamp(1.9rem, 3.2vw, 2.7rem);
+  line-height: 1.12;
+  margin-bottom: 0.35rem;
 }
 
 .dept-stats-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.8rem;
-  margin: 1rem 0;
+  gap: 0.75rem;
+  margin: 0.75rem 0;
 }
 
 .dept-stat-box {
   background: linear-gradient(135deg, rgba(79, 70, 229, 0.25) 0%, rgba(6, 182, 212, 0.15) 100%);
   border: 1px solid var(--border-glass);
   border-radius: 16px;
-  padding: 0.7rem 0.6rem;
+  padding: 0.65rem 0.55rem;
   text-align: center;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 .dept-stat-val {
   font-family: var(--font-display);
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   font-weight: 900;
   color: var(--text-gold);
   line-height: 1.1;
 }
 
 .dept-stat-lbl {
-  font-size: 0.8rem;
+  font-size: 0.76rem;
   color: var(--text-silver);
   font-weight: 600;
-  margin-top: 0.2rem;
+  margin-top: 0.15rem;
 }
 
 .dept-bullet-list {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  margin-top: 0.3rem;
+  gap: 0.45rem;
+  margin-top: 0.25rem;
 }
 
 .dept-bullet-item {
   display: flex;
   align-items: flex-start;
-  gap: 0.7rem;
+  gap: 0.65rem;
   font-size: 0.95rem;
   color: var(--text-silver);
-  line-height: 1.4;
+  line-height: 1.38;
 }
 
 .dept-bullet-icon {
   color: var(--text-cyan);
-  font-size: 1rem;
+  font-size: 0.95rem;
   flex-shrink: 0;
   margin-top: 0.1rem;
 }
@@ -904,8 +1007,8 @@ body {
   border: 1px solid var(--border-glass);
   color: #fff;
   font-family: var(--font-mono);
-  font-size: 0.8rem;
-  padding: 0.25rem 0.7rem;
+  font-size: 0.78rem;
+  padding: 0.22rem 0.65rem;
   border-radius: 9999px;
 }
 
@@ -924,11 +1027,13 @@ body {
   border: 1px solid var(--border-glass);
   border-radius: 9999px;
   padding: 0.4rem 0.6rem;
+  -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
   opacity: 0.75;
   transition: opacity 0.25s ease, transform 0.25s ease;
 }
+
 .floating-stage-hud:hover {
   opacity: 1;
   transform: translateY(-2px);
@@ -947,6 +1052,7 @@ body {
   cursor: pointer;
   transition: all 0.2s ease;
 }
+
 .hud-nav-btn:hover {
   background: linear-gradient(135deg, #4f46e5, #06b6d4);
   border-color: transparent;
@@ -961,6 +1067,7 @@ body {
   padding: 0.2rem 0.6rem;
   cursor: pointer;
 }
+
 .hud-counter-pill:hover {
   color: #fff;
 }
@@ -978,6 +1085,7 @@ body {
   cursor: pointer;
   transition: all 0.2s ease;
 }
+
 .hud-fs-btn:hover {
   background: rgba(245, 158, 11, 0.3);
   border-color: var(--border-gold);
@@ -988,19 +1096,22 @@ body {
 /* Responsive adjustments */
 @media (max-width: 1200px) {
   .slide-speaker-layout {
-    grid-template-columns: 400px 1fr;
-    gap: 2.5rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
   }
+
   .speaker-photo-frame {
-    width: 280px;
-    height: 280px;
+    width: 300px;
+    height: 300px;
   }
+
   .faculty-members-row.count-5 {
     flex-wrap: wrap;
   }
+
   .slide-dept-flyer-layout {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
   }
 }
 
@@ -1010,14 +1121,25 @@ body {
     gap: 1.5rem;
     overflow-y: auto;
   }
+
   .speaker-left-card {
     padding: 1.5rem;
   }
+
   .speaker-photo-frame {
-    width: 220px;
-    height: 220px;
+    width: 240px;
+    height: 240px;
   }
-  .agenda-table-grid, .feature-points-grid {
+
+  .slide-dept-flyer-layout {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    height: auto;
+    overflow-y: auto;
+  }
+
+  .agenda-table-grid,
+  .feature-points-grid {
     grid-template-columns: 1fr;
   }
 }

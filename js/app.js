@@ -32,14 +32,14 @@ const SLIDES = [
       { time: "10.40 AM", event: "Welcome Address", person: "Dr. M. D. Mohan Gift", role: "Vice Principal, GCOE", slideIdx: 3 },
       { time: "10.55 AM", event: "Presidential Address", person: "Mr. C. M. Joshua", role: "Chairman, GCOE", slideIdx: 4 },
       { time: "11.15 AM", event: "Inaugural Address", person: "R. Shiva Prasad IPS", role: "Superintendent of Police", slideIdx: 5 },
-      { time: "11.35 AM", event: "Special Invitee Address", person: "Mr. R. Joshua Arul Kumar", role: "Manager-Operations, Rane", slideIdx: 6 },
+      { time: "11.35 AM", event: "Special Invitee Address", person: "Dr. R. Joshua Arul Kumar", role: "Manager-Operations, Rane / Former Principal, Rane Polytechnic", slideIdx: 6 },
       { time: "11.50 AM", event: "Orientation", person: "Dr. S. Sidhardhan", role: "Principal, GCOE", slideIdx: 7 },
       { time: "12.10 PM", event: "HOD’s Introduction & Dept Showcases", person: "Heads of Departments", role: "Engineering, MBA & H&S", slideIdx: 8 },
-      { time: "12.45 PM", event: "Introduction of First Year Faculties", person: "Dr. J. Antony Rex Rodrigo", role: "HOD / H&S", slideIdx: 19 },
-      { time: "01.05 PM", event: "Department of Management Studies", person: "Dr. Sivakumar", role: "HOD / MBA", slideIdx: 17 },
-      { time: "01.15 PM", event: "Prize Distribution", person: "Management & Dignitaries", role: "Merit Awards", slideIdx: 26 },
-      { time: "01.25 PM", event: "Alumni & Present Learner Insights", person: "Alumni & Student Representatives", role: "GCOE", slideIdx: 27 },
-      { time: "01.35 PM", event: "Vote of Thanks", person: "Dr. R. Jaqulin Isabella", role: "AP / Tamil", slideIdx: 28 }
+      { time: "12.45 PM", event: "Introduction of First Year Faculties", person: "Dr. J. Antony Rex Rodrigo", role: "HOD / H&S", slideIdx: 20 },
+      { time: "01.05 PM", event: "Department of Management Studies", person: "Dr. Sivakumar", role: "HOD / MBA", slideIdx: 18 },
+      { time: "01.15 PM", event: "Prize Distribution", person: "Management & Dignitaries", role: "Merit Awards", slideIdx: 27 },
+      { time: "01.25 PM", event: "Alumni & Present Learner Insights", person: "Alumni & Student Representatives", role: "GCOE", slideIdx: 28 },
+      { time: "01.35 PM", event: "Vote of Thanks", person: "Dr. R. Jaqulin Isabella", role: "AP / Tamil", slideIdx: 29 }
     ]
   },
 
@@ -96,16 +96,17 @@ const SLIDES = [
     quote: "“Discipline, dedication, and knowledge are the ultimate superpowers that turn young scholars into national changemakers.”"
   },
 
-  // 6. Special Invitee Slide - R. Joshua Arul Kumar
+  // 6. Special Invitee Slide - Dr. R. Joshua Arul Kumar
   {
     id: "special-invitee",
     type: "special-invitee",
     agendaEvent: "SPECIAL INVITEE ADDRESS",
     badgeLabel: "★ SPECIAL INVITEE",
-    name: "Mr. R. Joshua Arul Kumar",
+    name: "Dr. R. Joshua Arul Kumar",
+    qualifications: "M.Tech., Ph.D. • 20 Years Experience",
     role: "Manager - Operations, Rane Vidyalaya Schools",
     isPlaceholder: true,
-    placeholderLabel: "PHOTO WILL BE UPDATED",
+    placeholderLabel: "SPACE FOR PHOTO",
     careerHistory: [
       {
         period: "15 May 2021 – 31st May 2026",
@@ -118,7 +119,15 @@ const SLIDES = [
         org: "Rane Vidyalaya Schools"
       }
     ],
-    description: "Special address bringing rich leadership perspectives on industrial-academic symbiosis, career trajectory, operational excellence, and holistic student growth.",
+    highlights: [
+      "20 Years Teaching Experience",
+      "Specialist: Deep Learning & Robotics",
+      "Embedded Systems & Neural Networks",
+      "WIPRO Mission10X Master Trainer",
+      "Established VLSI & E-Yantra Robotics Labs",
+      "Life Member: ISTE & IE"
+    ],
+    description: "Special address bringing 20 years of academic leadership, robotics and VLSI lab establishment, and operational excellence to inspire the incoming freshman batch.",
     quote: "“Continuous learning, strong foundational values, and technical agility are the keys to building an enduring career in modern industry.”"
   },
 
@@ -197,7 +206,14 @@ const SLIDES = [
     image: "assets/images/speakers/felcia_jerlin.png",
     fallback: "Screenshots/Grace College CSE - HoD Profile Flyer (1).jpg.jpeg",
     isPlaceholder: false,
-    description: "Dr. I. Felcia Jerlin is an Assistant Professor & HOD in CSE, specializing in Data Structures, Operating Systems, and UI/UX Design. She earned her Ph.D. from Anna University, Chennai, publishing extensively in premier international journals.",
+    highlights: [
+      "Ph.D. Anna University, Chennai",
+      "Specialist: Data Structures & OS",
+      "UI/UX Design Architecture",
+      "Interdisciplinary Project Mentor",
+      "Leading International Journal Publications"
+    ],
+    description: "Dr. I. Felcia Jerlin is an Assistant Professor & Head of the Department in Computer Science and Engineering at Grace College of Engineering. She earned her Ph.D. in CSE from Anna University, Chennai, and has published extensively in leading international journals and conferences. A dedicated academic and researcher specializing in Data Structures, Operating Systems, and UI/UX Design, she blends rigorous theoretical foundations with practical insights to empower aspiring engineers to create meaningful digital products with creativity and empathy.",
     quote: "“We are committed to empowering students with the skills to create meaningful digital experiences, integrating creativity, empathy, and problem-solving for real-world impact.”"
   },
 
@@ -253,26 +269,69 @@ const SLIDES = [
     deptName: "Department of Electronics & Communication Engineering",
     name: "Mrs. E. M. Uma Selvi",
     role: "Assistant Professor & Head of the Department (HOD) - ECE",
-    isPlaceholder: true,
-    placeholderLabel: "PHOTO WILL BE UPDATED",
-    description: "M.E. Communication Systems with 14+ years of academic and research excellence. Spearheading student innovation, VLSI design, advanced wireless labs, and 94.4% placement record.",
-    quote: "“Connecting the globe through semiconductor precision, wireless innovation, and hands-on engineering excellence.”"
+    image: "assets/images/speakers/uma_selvi.png",
+    fallback: "assets/images/departments/image2.png",
+    isPlaceholder: false,
+    highlights: [
+      "M.E. Communication Systems",
+      "14+ Years Academic Experience",
+      "94.4% Placement Record",
+      "Student 3D Printer Project Mentor",
+      "DSP & LIC Lab Architect"
+    ],
+    description: "Mrs. E. M. Uma Selvi is an Assistant Professor & Head of the Department in Electronics and Communication Engineering at Grace College of Engineering. Holding an M.E. in Communication Systems with over 14 years of dedicated academic and research experience, she actively spearheads hands-on student innovations—including guiding students to design and develop a fully functional 3D printer from scratch. Under her dynamic leadership, the department achieved a stellar 94.4% placement record (17 out of 18 students placed), driving excellence in Digital Signal Processing (DSP), Linear Integrated Circuits (LIC), and advanced semiconductor technologies.",
+    quote: "“Connecting the globe through semiconductor precision, wireless innovation, and hands-on engineering excellence: LEARN • DESIGN • BUILD • TEST • INNOVATE.”"
   },
 
   // =========================================================================
-  // 11. EEE DEPARTMENT
+  // 11. EEE DEPARTMENT SHOWCASE & HOD
   // =========================================================================
+  // 11a. EEE Department Flyer & Highlights
+  {
+    id: "eee-flyer",
+    type: "dept-flyer",
+    agendaEvent: "DEPARTMENT SPOTLIGHT • ELECTRICAL & ELECTRONICS ENGINEERING",
+    deptCode: "EEE",
+    deptName: "Department of Electrical and Electronics Engineering",
+    flyerImage: "assets/images/departments/eee_flyer.webp",
+    fallbackFlyer: "assets/images/departments/eee_flyer.png",
+    badge: "Powering Ideas... Energizing Tomorrow",
+    stats: [
+      { value: "100%", label: "Placement Track Record" },
+      { value: "2 Times", label: "Niral Thiruvizha Winners" },
+      { value: "Innovative", label: "Projects Every Year" }
+    ],
+    bullets: [
+      "Consistent 100% Placement record for eligible students across leading core electrical and IT sectors.",
+      "2-Time Winners of Prestigious Niral Thiruvizha: Hybrid Microbial Fuel Cell, Solar E-Bicycle & VR for Engineering Education.",
+      "Excellent Core Career Hub in Thoothukudi: NTPL, TANGEDCO/TNPEDCL, TTPS, Sterlite Power, Tata Power, SPIC, Ind-Barath, SEPC, DCW.",
+      "Advanced Laboratories: Well-equipped modern labs, latest simulation software & hands-on industry skill development."
+    ],
+    recruiters: ["NTPL", "TANGEDCO", "TTPS", "Sterlite Power", "Tata Power", "SPIC", "DCW", "SEPC Power"]
+  },
+
+  // 11b. EEE HOD Profile - Dr. S. Ganesh
   {
     id: "hod-eee",
     type: "hod-single",
     agendaEvent: "HOD INTRODUCTION • ELECTRICAL & ELECTRONICS ENGINEERING",
     deptCode: "EEE",
     deptName: "Department of Electrical & Electronics Engineering",
-    name: "[ HOD / EEE Name ]",
-    role: "Head of Department (HOD)",
-    isPlaceholder: true,
-    description: "Empowering next-gen renewable energy systems, smart power grids, EV drive technologies, and industrial power automation.",
-    quote: "“Powering sustainable futures with smart grid intelligence and clean energy.”"
+    name: "Dr. S. Ganesh",
+    role: "Associate Professor & Head of the Department (HOD) - EEE",
+    image: "assets/images/speakers/ganesh.png",
+    fallback: "assets/images/speakers/ganesh_raw.jpeg",
+    isPlaceholder: false,
+    highlights: [
+      "B.E., M.E. (Power Systems), Ph.D. (Anna Univ)",
+      "12+ Years Teaching & Research",
+      "3 Patents (VFD, Robotics, Microgrids)",
+      "22 Journal Papers (IEEE, Wiley, IET)",
+      "₹3.5 Lakh AICTE Cyber Security Grant",
+      "2× State Niral Thiruvizha Mentor"
+    ],
+    description: "Dr. S. Ganesh, M.E., Ph.D. (Electrical) is an accomplished academician, researcher, and mentor with over 12 years of experience. He completed his B.E., M.E. in Power Systems, and Ph.D. from institutions affiliated with Anna University. His research spans Smart Grids, Renewable Microgrids, D-STATCOM, Electric Vehicles, AI/IoT, and Cyber-Physical Systems. Dr. Ganesh has published 22 journal papers (IEEE, Wiley, IET, Scopus) and 2 book chapters, holds 3 patents (variable-frequency-drive technology, multi-agent robotic systems, microgrid power scheduling), and secured ₹3,50,000 AICTE funding for AI-Powered Cyber Security in Industrial Control Systems. As a dedicated mentor, he guided student innovations to win state-level honors at Naan Mudhalvan–Niral Thiruvizha for the Solar E-Bicycle and VR in Engineering Education.",
+    quote: "“Join EEE, Power Your Passion, Power the Future! Empowering ideas and energizing tomorrow through smart power, clean energy, and visionary innovation.”"
   },
 
   // =========================================================================
@@ -687,8 +746,9 @@ function renderSlide(index) {
             </div>
           </div>
           <h2 class="speaker-display-name chief-guest-name-slot">${slide.name}</h2>
+          ${slide.qualifications ? `<div class="cover-batch-badge" style="margin: 0.35rem 0 0.6rem 0;">${slide.qualifications}</div>` : ''}
           <div class="speaker-display-role">${slide.role}</div>
-          <div class="special-invitee-badge">★ SPECIAL INVITEE</div>
+          <div class="special-invitee-badge">★ SPECIAL INVITEE ★</div>
         </div>
 
         <div class="speaker-right-card">
@@ -698,12 +758,22 @@ function renderSlide(index) {
           <div class="special-career-timeline">
             ${slide.careerHistory ? slide.careerHistory.map(item => `
               <div class="timeline-item">
-                <div class="timeline-period">${item.period}</div>
+                <div class="timeline-period">📅 ${item.period}</div>
                 <div class="timeline-role">${item.role}</div>
                 <div class="timeline-org">${item.org}</div>
               </div>
             `).join('') : ''}
           </div>
+
+          ${slide.highlights ? `
+            <div class="hod-highlights-strip" style="margin: 0.6rem 0 0.8rem 0;">
+              ${slide.highlights.map(h => `
+                <span class="hod-highlight-badge">
+                  ✦ ${h}
+                </span>
+              `).join('')}
+            </div>
+          ` : ''}
 
           <p class="agenda-event-desc">${slide.description}</p>
           
@@ -777,6 +847,17 @@ function renderSlide(index) {
         <div class="speaker-right-card">
           <div class="agenda-event-tag">★ HOD INTRODUCTION • ${slide.deptCode}</div>
           <h1 class="agenda-event-title">${slide.deptName}</h1>
+          
+          ${slide.highlights ? `
+            <div class="hod-highlights-strip">
+              ${slide.highlights.map(h => `
+                <span class="hod-highlight-badge">
+                  ✦ ${h}
+                </span>
+              `).join('')}
+            </div>
+          ` : ''}
+
           <p class="agenda-event-desc">${slide.description}</p>
           
           <div class="speaker-quote-banner">
@@ -909,7 +990,7 @@ function renderSlide(index) {
     
     if (scale < 1) {
       child.style.transform = `scale(${scale.toFixed(4)})`;
-      child.style.transformOrigin = 'center top';
+      child.style.transformOrigin = 'center center';
     }
   });
 }
