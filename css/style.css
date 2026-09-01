@@ -814,7 +814,343 @@ body {
 }
 
 /* ==========================================================================
-   SLIDE: PRIZE DISTRIBUTION AWARDEES LAYOUT (3 HERO CARDS)
+   SLIDE: FULLSCREEN EVENT FLYER LAYOUT (SLIDE 0)
+   ========================================================================== */
+.slide-flyer-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 0.8rem;
+}
+
+.flyer-stage-frame {
+  position: relative;
+  max-height: 80vh;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9), 0 0 70px rgba(245, 158, 11, 0.35);
+  border: 3px solid var(--border-gold);
+  background: var(--bg-panel);
+}
+
+.flyer-stage-img {
+  max-height: 76vh;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.flyer-cta-strip {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  background: rgba(15, 23, 42, 0.9);
+  border: 2px solid var(--border-gold);
+  border-radius: 9999px;
+  padding: 0.5rem 1.8rem;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 25px rgba(245, 158, 11, 0.3);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+  color: var(--text-gold);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.flyer-cta-strip:hover {
+  transform: translateY(-2px);
+  border-color: var(--text-cyan);
+  color: var(--text-cyan);
+}
+
+/* ==========================================================================
+   SLIDE: AI & DS MULTI-IMAGE GALLERY SPOTLIGHT LAYOUT
+   ========================================================================== */
+.slide-aids-gallery-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 2.2rem;
+  width: 100%;
+  max-width: 1540px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.aids-gallery-left {
+  background: var(--bg-panel);
+  border: 2px solid var(--border-glass);
+  border-radius: 32px;
+  padding: 1.2rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85), 0 0 50px rgba(79, 70, 229, 0.35);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+}
+
+.aids-hero-display {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px solid var(--border-gold);
+  background: #020617;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.7);
+}
+
+.aids-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #020617;
+  display: block;
+}
+
+.aids-hero-badge-overlay {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  background: linear-gradient(135deg, #f59e0b, #ef4444);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 0.25rem 0.75rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+.aids-hero-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(2, 6, 23, 0.95) 100%);
+  padding: 0.6rem 1rem 0.4rem;
+  color: #38bdf8;
+  font-weight: 700;
+  font-size: 0.88rem;
+  z-index: 2;
+}
+
+.aids-thumbs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.55rem;
+}
+
+.aids-thumb-card {
+  height: 68px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid var(--border-glass);
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  background: #000;
+}
+
+.aids-thumb-card:hover, .aids-thumb-card.active {
+  transform: translateY(-2px);
+  border-color: var(--border-gold);
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.5);
+}
+
+.aids-thumb-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.aids-thumb-lbl {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 1px 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ==========================================================================
+   SLIDE: DEPARTMENT QUAD-GALLERY SPOTLIGHT LAYOUT (4 TILES PER SLIDE)
+   ========================================================================== */
+.slide-dept-quad-layout {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 2.2rem;
+  width: 100%;
+  max-width: 1540px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.quad-gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+  background: var(--bg-panel);
+  border: 2px solid var(--border-glass);
+  border-radius: 28px;
+  padding: 1rem;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85), 0 0 50px rgba(79, 70, 229, 0.35);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+}
+
+.quad-photo-card {
+  position: relative;
+  height: 185px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid var(--border-glass);
+  background: #020617;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.quad-photo-card:hover {
+  transform: scale(1.03);
+  border-color: var(--border-gold);
+  box-shadow: 0 12px 30px rgba(245, 158, 11, 0.4);
+  z-index: 5;
+}
+
+.quad-photo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.quad-card-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: linear-gradient(135deg, #f59e0b, #ef4444);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+.quad-card-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(2, 6, 23, 0.95) 100%);
+  padding: 0.5rem 0.7rem 0.3rem;
+  color: #38bdf8;
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  z-index: 2;
+}
+
+/* ==========================================================================
+   SLIDE: CLOSING PRAYER & BENEDICTION LAYOUT
+   ========================================================================== */
+.slide-benediction-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 3rem;
+  align-items: center;
+  width: 100%;
+  max-width: 1480px;
+  margin: 0 auto;
+}
+
+.benediction-left-card {
+  background: var(--bg-panel);
+  border: 2px solid var(--border-gold);
+  border-radius: 36px;
+  padding: 2.4rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.85), 0 0 60px rgba(245, 158, 11, 0.35);
+  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
+}
+
+.benediction-cross-icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f59e0b, #ec4899, #4f46e5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 45px rgba(245, 158, 11, 0.5);
+  margin-bottom: 1.2rem;
+  color: #ffffff;
+}
+
+.prayer-pillars-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.prayer-pillar-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-glass);
+  border-radius: 14px;
+  padding: 0.85rem 1.1rem;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.prayer-pillar-item:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-gold);
+}
+
+.prayer-pillar-icon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.prayer-pillar-title {
+  font-weight: 800;
+  font-size: 1rem;
+  color: var(--text-gold);
+  margin-bottom: 0.2rem;
+}
+
+.prayer-pillar-desc {
+  font-size: 0.85rem;
+  color: var(--text-silver);
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   SLIDE: PRIZE DISTRIBUTION AWARDEES LAYOUT (HONOURING THE TOPPERS)
    ========================================================================== */
 .slide-prize-awardees-layout {
   width: 100%;
@@ -825,30 +1161,78 @@ body {
   margin: 0 auto;
 }
 
+.prize-presenter-banner {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.3) 0%, rgba(245, 158, 11, 0.2) 100%);
+  border: 2px solid var(--border-gold);
+  border-radius: 20px;
+  padding: 0.6rem 1.4rem;
+  margin-bottom: 0.8rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 35px rgba(245, 158, 11, 0.25);
+  width: 100%;
+  max-width: 1080px;
+}
+
+.presenter-avatar-sm {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  border: 2px solid var(--border-gold);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.presenter-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.presenter-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--text-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.presenter-name {
+  font-size: 1.12rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.presenter-role {
+  font-size: 0.82rem;
+  color: var(--text-cyan);
+}
+
 .prize-header-strip {
   text-align: center;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.6rem;
 }
 
 .prize-header-strip .agenda-event-title {
-  font-size: clamp(2rem, 3.2vw, 2.6rem);
+  font-size: clamp(2rem, 3.2vw, 2.5rem);
   line-height: 1.15;
-  margin-bottom: 0.15rem;
+  margin-bottom: 0.1rem;
 }
 
 .awardees-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.6rem;
+  gap: 1.4rem;
   width: 100%;
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.6rem;
 }
 
 .awardee-card {
   background: var(--bg-panel);
   border: 2px solid var(--border-glass);
   border-radius: 28px;
-  padding: 1.5rem 1.3rem;
+  padding: 1.3rem 1.2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -868,13 +1252,13 @@ body {
 }
 
 .awardee-avatar-frame {
-  width: 170px;
-  height: 170px;
+  width: 155px;
+  height: 155px;
   border-radius: 50%;
-  padding: 6px;
+  padding: 5px;
   background: linear-gradient(135deg, #f59e0b, #ec4899, #06b6d4);
   box-shadow: 0 0 35px rgba(245, 158, 11, 0.45);
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.7rem;
   flex-shrink: 0;
   overflow: hidden;
   display: flex;
@@ -890,48 +1274,61 @@ body {
   display: block;
 }
 
+.awardee-cutoff-badge {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #ffffff;
+  font-family: var(--font-mono);
+  font-size: 1.15rem;
+  font-weight: 900;
+  padding: 0.3rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.03em;
+}
+
 .awardee-badge {
   background: linear-gradient(135deg, #f59e0b, #ef4444);
   color: #fff;
   font-family: var(--font-mono);
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 800;
-  padding: 0.25rem 0.85rem;
+  padding: 0.2rem 0.8rem;
   border-radius: 9999px;
-  margin-bottom: 0.45rem;
+  margin-bottom: 0.35rem;
   box-shadow: 0 4px 15px rgba(245, 158, 11, 0.35);
 }
 
 .awardee-name {
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 1.45rem;
   font-weight: 800;
   color: #ffffff;
   line-height: 1.2;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.2rem;
 }
 
 .awardee-dept {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: var(--text-cyan);
   font-weight: 700;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.3rem;
 }
 
 .awardee-desc {
-  font-size: 0.84rem;
+  font-size: 0.82rem;
   color: var(--text-silver);
-  line-height: 1.4;
+  line-height: 1.35;
 }
 
 .prize-footer-quote {
   background: linear-gradient(135deg, rgba(79, 70, 229, 0.25) 0%, rgba(6, 182, 212, 0.15) 100%);
   border-left: 4px solid var(--border-gold);
   border-radius: 12px;
-  padding: 0.5rem 1.4rem;
+  padding: 0.45rem 1.4rem;
   font-style: italic;
   color: #fef08a;
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   text-align: center;
 }
 
