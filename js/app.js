@@ -1,7 +1,7 @@
 /**
  * INDUCTION DAY 2026 - PPT STAGE SLIDE DECK
  * Grace College of Engineering (GCOE)
- * Department of Humanities & Science and Department of MBA
+ * Department of Humanities & Sciences and Department of Management Studies (MBA)
  */
 
 const SLIDES = [
@@ -25,21 +25,22 @@ const SLIDES = [
     id: "agenda",
     type: "agenda",
     title: "PROGRAM AGENDA",
-    subtitle: "DEPARTMENT OF HUMANITIES AND SCIENCE • INDUCTION DAY (03.09.2026)",
+    subtitle: "DEPARTMENT OF HUMANITIES AND SCIENCES • INDUCTION DAY (03.09.2026)",
     venueTime: "VENUE: GRACE AUDITORIUM | TIME: 10.30 AM",
     items: [
       { time: "10.30 AM", event: "Prayer", person: "Mr. S. Stephen", role: "Vice Chairman, GCOE", slideIdx: 2 },
       { time: "10.40 AM", event: "Welcome Address", person: "Dr. M. D. Mohan Gift", role: "Vice Principal, GCOE", slideIdx: 3 },
       { time: "10.55 AM", event: "Presidential Address", person: "Mr. C. M. Joshua", role: "Chairman, GCOE", slideIdx: 4 },
-      { time: "11.15 AM", event: "Inaugural Address", person: "R. Shiva Prasad IPS", role: "Superintendent of Police", slideIdx: 5 },
-      { time: "11.35 AM", event: "Special Invitee Address", person: "Dr. R. Joshua Arul Kumar", role: "Manager-Operations, Rane / Former Principal, Rane Polytechnic", slideIdx: 6 },
-      { time: "11.50 AM", event: "Orientation", person: "Dr. S. Sidhardhan", role: "Principal, GCOE", slideIdx: 7 },
-      { time: "12.10 PM", event: "HOD’s Introduction & Dept Showcases", person: "Heads of Departments", role: "Engineering, MBA & H&S", slideIdx: 8 },
-      { time: "12.45 PM", event: "Introduction of First Year Faculties", person: "Dr. J. Antony Rex Rodrigo", role: "HOD / H&S", slideIdx: 20 },
-      { time: "01.05 PM", event: "Department of Management Studies", person: "Dr. Sivakumar", role: "HOD / MBA", slideIdx: 18 },
-      { time: "01.15 PM", event: "Prize Distribution", person: "Management & Dignitaries", role: "Merit Awards", slideIdx: 27 },
-      { time: "01.25 PM", event: "Alumni & Present Learner Insights", person: "Alumni & Student Representatives", role: "GCOE", slideIdx: 28 },
-      { time: "01.35 PM", event: "Vote of Thanks", person: "Dr. R. Jaqulin Isabella", role: "AP / Tamil", slideIdx: 29 }
+      { time: "11.15 AM", event: "Inaugural Address", person: "Sri R. Shiva Prasad IPS", role: "Superintendent of Police", slideIdx: 5 },
+      { time: "11.35 AM", event: "Special Invitee Address", person: "Dr. R. Joshua Arul Kumar", role: "Manager-Operations, Rane", slideIdx: 6 },
+      { time: "11.45 AM", event: "Special Invitee Address", person: "Dr. B. Janet", role: "Associate Professor, NIT Trichy", slideIdx: 7 },
+      { time: "11.55 AM", event: "Orientation", person: "Dr. S. Sidhardhan", role: "Principal, GCOE", slideIdx: 8 },
+      { time: "12.10 PM", event: "HOD’s Introduction & Dept Showcases", person: "Heads of Departments", role: "Engineering & H&S", slideIdx: 9 },
+      { time: "12.45 PM", event: "Introduction of First Year Faculties", person: "Dr. J. Antony Rex Rodrigo", role: "HOD / H&S", slideIdx: 21 },
+      { time: "01.05 PM", event: "Department of Management Studies", person: "Dr. Sivakumar & MBA Faculty", role: "HOD & Faculty / MBA", slideIdx: 29 },
+      { time: "01.15 PM", event: "Prize Distribution", person: "Management & Dignitaries", role: "Merit Awards", slideIdx: 31 },
+      { time: "01.25 PM", event: "Alumni & Present Learner Insights", person: "Alex Mathew & Sumitha Rani", role: "Distinguished Alumni", slideIdx: 32 },
+      { time: "01.35 PM", event: "Vote of Thanks", person: "Dr. R. Jaqulin Isabella", role: "AP / Tamil", slideIdx: 33 }
     ]
   },
 
@@ -82,31 +83,32 @@ const SLIDES = [
     quote: "“At Grace, we cultivate visionaries, innovators, and leaders who will build tomorrow's world.”"
   },
 
-  // 5. Chief Guest Inaugural Address - R. Shiva Prasad IPS
+  // 5. Chief Guest Inaugural Address - Sri R. Shiva Prasad IPS
   {
     id: "chief-guest",
     type: "speaker",
     agendaEvent: "INAUGURAL ADDRESS",
     badgeLabel: "★ CHIEF GUEST & KEYNOTE SPEAKER",
-    name: "R. Shiva Prasad IPS",
+    name: "Sri R. Shiva Prasad IPS",
     role: "Superintendent of Police, Thoothukudi Dist.",
     image: "assets/images/speakers/shiva_prasad.png",
-    fallback: "Screenshots/R. Shiva Prasad.jpeg",
+    fallback: "Screenshots/R. Shiva Prasad.png",
     description: "Inaugural address illuminating emerging technologies, discipline, societal impact, ethical leadership, and empowering youth readiness.",
     quote: "“Discipline, dedication, and knowledge are the ultimate superpowers that turn young scholars into national changemakers.”"
   },
 
-  // 6. Special Invitee Slide - Dr. R. Joshua Arul Kumar
+  // 6. Special Invitee Slide 1 - Dr. R. Joshua Arul Kumar
   {
-    id: "special-invitee",
+    id: "special-invitee-joshua",
     type: "special-invitee",
     agendaEvent: "SPECIAL INVITEE ADDRESS",
     badgeLabel: "★ SPECIAL INVITEE",
     name: "Dr. R. Joshua Arul Kumar",
     qualifications: "M.Tech., Ph.D. • 20 Years Experience",
     role: "Manager - Operations, Rane Vidyalaya Schools",
-    isPlaceholder: true,
-    placeholderLabel: "SPACE FOR PHOTO",
+    image: "assets/images/speakers/joshua_arul_kumar.png",
+    fallback: "Screenshots/joshua arul kumar.png",
+    isPlaceholder: false,
     careerHistory: [
       {
         period: "15 May 2021 – 31st May 2026",
@@ -131,7 +133,42 @@ const SLIDES = [
     quote: "“Continuous learning, strong foundational values, and technical agility are the keys to building an enduring career in modern industry.”"
   },
 
-  // 7. Principal Orientation
+  // 7. Special Invitee Slide 2 - Dr. B. Janet (NIT Trichy)
+  {
+    id: "special-invitee-janet",
+    type: "special-invitee",
+    agendaEvent: "SPECIAL INVITEE ADDRESS",
+    badgeLabel: "★ SPECIAL INVITEE",
+    name: "Dr. B. Janet",
+    qualifications: "M.C.A., M.Phil., Ph.D. • NIT Tiruchirappalli",
+    role: "Associate Professor, Dept. of Computer Applications, NIT Trichy",
+    image: "assets/images/speakers/b_janet.png",
+    fallback: "Screenshots/b.janet.png",
+    isPlaceholder: false,
+    careerHistory: [
+      {
+        period: "14+ Years Teaching & Research",
+        role: "Associate Professor / Faculty",
+        org: "National Institute of Technology (NIT), Tiruchirappalli"
+      },
+      {
+        period: "Founder & Lab In-Charge",
+        role: "Information Processing & Security Lab",
+        org: "NIT Tiruchirappalli"
+      }
+    ],
+    highlights: [
+      "Ph.D., National Institute of Technology, Trichy",
+      "Information Retrieval & Web Security Specialist",
+      "Established Info Processing & Security Lab",
+      "IEEE & International Journal Reviewer",
+      "National Coordinator: Cyber Security & AI Forums"
+    ],
+    description: "Special address delivering deep insights into cybersecurity, web intelligence, information processing, and ethical technology practices from one of India's premier institutes of national importance (NIT Trichy).",
+    quote: "“Cultivate relentless curiosity and strong technical ethics — the digital era belongs to purposeful creators.”"
+  },
+
+  // 8. Principal Orientation - Dr. S. Sidhardhan
   {
     id: "sidhardhan",
     type: "speaker",
@@ -145,9 +182,9 @@ const SLIDES = [
   },
 
   // =========================================================================
-  // 8. CSE DEPARTMENT SHOWCASE (ORDER: FLYER -> CONTENT & ACHIEVEMENTS -> HOD)
+  // 9. CSE DEPARTMENT SHOWCASE & HOD
   // =========================================================================
-  // 8a. CSE Department Flyer & Placement Track Record
+  // 9a. CSE Flyer
   {
     id: "cse-flyer",
     type: "dept-flyer",
@@ -170,7 +207,7 @@ const SLIDES = [
     recruiters: ["Infosys", "TCS", "HCLTech", "Foxconn", "Literact", "DigiSailor", "Jilaba", "Palnar"]
   },
 
-  // 8b. CSE Content & Notable Achievements
+  // 9b. CSE Achievements
   {
     id: "cse-achievements",
     type: "dept-flyer",
@@ -194,7 +231,7 @@ const SLIDES = [
     recruiters: ["Rinex", "Thozhil", "Roriri Software", "Shloklabs", "Space Zee", "Webberax"]
   },
 
-  // 8c. CSE HOD Profile - Dr. I. Felcia Jerlin
+  // 9c. CSE HOD Profile - Dr. I. Felcia Jerlin
   {
     id: "hod-cse",
     type: "hod-single",
@@ -218,7 +255,7 @@ const SLIDES = [
   },
 
   // =========================================================================
-  // 9. AI & DS DEPARTMENT
+  // 10. AI & DS DEPARTMENT
   // =========================================================================
   {
     id: "hod-aids",
@@ -234,9 +271,9 @@ const SLIDES = [
   },
 
   // =========================================================================
-  // 10. ECE DEPARTMENT SHOWCASE & HOD
+  // 11. ECE DEPARTMENT SHOWCASE & HOD
   // =========================================================================
-  // 10a. ECE Department Flyer & Highlights
+  // 11a. ECE Flyer
   {
     id: "ece-flyer",
     type: "dept-flyer",
@@ -260,7 +297,7 @@ const SLIDES = [
     recruiters: ["VLSI & Semiconductor", "Embedded Systems", "5G/6G Telecom", "Robotics & Automation"]
   },
 
-  // 10b. ECE HOD Profile - Mrs. E.M. Uma Selvi
+  // 11b. ECE HOD Profile - Mrs. E. M. Uma Selvi
   {
     id: "hod-ece",
     type: "hod-single",
@@ -284,9 +321,9 @@ const SLIDES = [
   },
 
   // =========================================================================
-  // 11. EEE DEPARTMENT SHOWCASE & HOD
+  // 12. EEE DEPARTMENT SHOWCASE & HOD
   // =========================================================================
-  // 11a. EEE Department Flyer & Highlights
+  // 12a. EEE Flyer
   {
     id: "eee-flyer",
     type: "dept-flyer",
@@ -310,7 +347,7 @@ const SLIDES = [
     recruiters: ["NTPL", "TANGEDCO", "TTPS", "Sterlite Power", "Tata Power", "SPIC", "DCW", "SEPC Power"]
   },
 
-  // 11b. EEE HOD Profile - Dr. S. Ganesh
+  // 12b. EEE HOD Profile - Dr. S. Ganesh
   {
     id: "hod-eee",
     type: "hod-single",
@@ -335,75 +372,147 @@ const SLIDES = [
   },
 
   // =========================================================================
-  // 12. MECHANICAL ENGINEERING
+  // 13. MECHANICAL ENGINEERING SHOWCASE & HOD
   // =========================================================================
+  // 13a. Mechanical Department Spotlight
+  {
+    id: "mech-spotlight",
+    type: "dept-spotlight",
+    agendaEvent: "DEPARTMENT SPOTLIGHT • MECHANICAL ENGINEERING",
+    deptCode: "MECH",
+    deptName: "Department of Mechanical Engineering",
+    badge: "B.E. Programme Established in 2009",
+    vision: "To be internationally recognized for Mechanical Engineering education and to develop well-qualified, innovative engineers prepared for advanced studies and global careers.",
+    topics: [
+      "CAD / CAM & Simulation",
+      "Robotics & Automation",
+      "Thermal & Heat Transfer",
+      "Fluid Mechanics & Hydraulics",
+      "Kinematics & Dynamics",
+      "Manufacturing Technology",
+      "Strength of Materials",
+      "Mechatronics & PLC"
+    ],
+    description: "The Department of Mechanical Engineering has established a long-standing academic record in education, placement, and research since the inception of Grace College of Engineering in 2009. Students undergo rigorous theoretical and hands-on laboratory immersion spanning design, simulation, precision machining, and intelligent mechatronic automation.",
+    labs: [
+      {
+        title: "Manufacturing Technology Lab",
+        desc: "Machining, lathe operations, shaping, drilling, milling & modern production practice."
+      },
+      {
+        title: "CAD / CAM / CAE Computing Lab",
+        desc: "AutoCAD, SolidWorks, PRO-E, CATIA, ANSYS, Edgecam & CNC industrial trainers."
+      },
+      {
+        title: "Thermal Engineering Lab",
+        desc: "IC-engine performance analysis, heat transfer setups & experimental testing."
+      },
+      {
+        title: "Strength & Fluid Mechanics Lab",
+        desc: "Universal testing machine, pumps, turbines, flow measurements & hydraulics."
+      },
+      {
+        title: "Kinematics & Dynamics Lab",
+        desc: "Dynamic balancing, vibration analysis, gyroscopes, flywheels & machine dynamics."
+      },
+      {
+        title: "Mechatronics & Automation Lab",
+        desc: "Electro-pneumatics, PLC programming, servo controls & robotics integration."
+      }
+    ],
+    outcomes: ["Problem Analysis", "Precision System Design", "Experimental Investigation", "Modern Tool Usage (CAD/CAM/FEA)", "Ethical Professional Practice"]
+  },
+
+  // 13b. Mechanical HOD Profile - Dr. M. D. Mohan Gift
   {
     id: "hod-mech",
     type: "hod-single",
     agendaEvent: "HOD INTRODUCTION • MECHANICAL ENGINEERING",
     deptCode: "MECH",
     deptName: "Department of Mechanical Engineering",
-    name: "[ HOD / Mechanical Name ]",
-    role: "Head of Department (HOD)",
-    isPlaceholder: true,
-    description: "Driving innovation in computer-aided design & manufacturing (CAD/CAM), thermal engineering, mechatronics, and robotics.",
-    quote: "“Transforming imagination into precision machines and robotic marvels.”"
+    name: "Dr. M. D. Mohan Gift",
+    role: "Professor & Head of Department (HOD) - Mechanical Engineering",
+    image: "assets/images/speakers/mohan_gift.png",
+    fallback: "Screenshots/Mohan Gift.png",
+    isPlaceholder: false,
+    highlights: [
+      "B.E., M.E., Ph.D. • 26 Years Experience",
+      "Vice Principal, Grace College of Engineering",
+      "CAD/CAM, Robotics & Thermal Engineering",
+      "26+ Years of Academic & Research Leadership",
+      "Excellence and Genuineness for Innovation"
+    ],
+    description: "Dr. M. D. Mohan Gift, B.E., M.E., Ph.D., is the Vice Principal and Professor & Head of the Department of Mechanical Engineering at Grace College of Engineering. With over 26 years of distinguished academic leadership, teaching, and research experience, he spearheads advanced mechanical engineering education, modern manufacturing labs, CAD/CAM/Robotics integration, and multidisciplinary student innovation. Under his leadership, the department prepares graduates with high competence, character, and industry readiness.",
+    quote: "“Engineering the future with competence, character & innovation — Excellence and Genuineness for Innovation.”"
   },
 
   // =========================================================================
-  // 13. CIVIL ENGINEERING
+  // 14. CIVIL ENGINEERING SHOWCASE & HOD
   // =========================================================================
+  // 14a. Civil Department Spotlight Flyer
+  {
+    id: "civil-flyer",
+    type: "dept-flyer",
+    agendaEvent: "DEPARTMENT SPOTLIGHT • CIVIL ENGINEERING",
+    deptCode: "CIVIL",
+    deptName: "Department of Civil Engineering",
+    flyerImage: "assets/images/departments/civil_flyer.webp",
+    fallbackFlyer: "assets/images/departments/civil_flyer.png",
+    badge: "100% Placement Success Record",
+    stats: [
+      { value: "100%", label: "Placement in Past 4 Years" },
+      { value: "CPWD / RLY", label: "Govt Opportunities" },
+      { value: "Live Visits", label: "Hydro, Ports & Plants" }
+    ],
+    bullets: [
+      "Expansive Scope: Infrastructure Development, Urban Planning, Environmental & Geotechnical Engineering, Transportation, Water Resources, Sustainability & Green Building.",
+      "Hands-on Field Immersion: Hydro Power Plant visits, Survey Camps, Tuticorin Harbour visits, Water Treatment & RMC plant exposure, Plastic Brick & Concrete mixing platforms.",
+      "Prime Core Government Opportunities: CPWD, Indian Railways, State PWDs, TNHB, TNEB, TWAD Board, Ministry of Housing & Urban Affairs, PSUs & UPSC."
+    ],
+    recruiters: ["SAMSIV CADD Intellects", "OPA Archfirm", "SPIC", "Renaatus", "Govt Civil Sectors"]
+  },
+
+  // 14b. Civil HOD Profile - Dr. Nalini Jebastina
   {
     id: "hod-civil",
     type: "hod-single",
     agendaEvent: "HOD INTRODUCTION • CIVIL ENGINEERING",
     deptCode: "CIVIL",
     deptName: "Department of Civil Engineering",
-    name: "[ HOD / Civil Name ]",
-    role: "Head of Department (HOD)",
-    isPlaceholder: true,
-    description: "Mastering sustainable infrastructure design, structural engineering, smart environmental solutions, and modern construction management.",
-    quote: "“Building enduring structures and green infrastructure for modern civilizations.”"
-  },
-
-  // =========================================================================
-  // 14. DEPARTMENT OF MANAGEMENT STUDIES (MBA)
-  // =========================================================================
-  {
-    id: "hod-mba",
-    type: "hod-single",
-    agendaEvent: "HOD INTRODUCTION • DEPARTMENT OF MANAGEMENT STUDIES",
-    deptCode: "MBA",
-    deptName: "Department of Management Studies (MBA)",
-    name: "Dr. Sivakumar",
-    role: "Head of Department (HOD) - MBA",
-    image: "assets/images/speakers/sivakumar.png",
-    fallback: "Screenshots/Sivakumar.png",
+    name: "Dr. Nalini Jebastina",
+    role: "Assistant Professor & Head of Department (HOD) - Civil",
+    image: "assets/images/speakers/nalini_jebastina.png",
+    fallback: "scratch/civil_hod_p1_img1.jpeg",
     isPlaceholder: false,
-    description: "Nurturing techno-managerial leaders, corporate strategists, entrepreneurs, and global business managers.",
-    quote: "“Leadership and management acumen empower engineers to convert brilliant ideas into global enterprises.”"
+    highlights: [
+      "B.E., M.Tech (Remote Sensing), Ph.D.",
+      "20 Years Teaching Experience",
+      "100% Placement Success Track Record",
+      "Remote Sensing & GIS Specialist",
+      "Turn ideas into Infrastructure"
+    ],
+    description: "Dr. Nalini Jebastina is the Assistant Professor & Head of the Department of Civil Engineering at Grace College of Engineering. Holding an M.Tech in Remote Sensing and a Ph.D. in Civil Engineering with over 20 years of dedicated teaching and research excellence, she leads modern civil infrastructure education, hands-on survey camps, environmental sustainability initiatives, and corporate partnerships yielding a stellar 100% placement track record over the past four years.",
+    quote: "“Turn ideas into enduring infrastructure — building resilient, smart, and sustainable structures for future generations.”"
   },
 
   // =========================================================================
-  // 15. HUMANITIES & SCIENCES (H&S)
+  // 15. HOD OF H&S INTRODUCTION OF FIRST YEAR FACULTIES
   // =========================================================================
   {
-    id: "hod-hs",
-    type: "hod-single",
-    agendaEvent: "HOD INTRODUCTION • HUMANITIES & SCIENCES",
-    deptCode: "H&S",
-    deptName: "Department of Humanities & Sciences (H&S)",
+    id: "hod-hs-intro",
+    type: "speaker",
+    agendaEvent: "INTRODUCTION OF FIRST YEAR FACULTIES",
+    badgeLabel: "★ HEAD OF DEPARTMENT • H&S",
     name: "Dr. J. Antony Rex Rodrigo",
-    role: "Head of Department (HOD) - Humanities & Science",
+    role: "Head of the Department (HOD) - Humanities & Sciences",
     image: "assets/images/speakers/antony_rex.png",
     fallback: "Screenshots/Antony Rex HOD.jpeg",
-    isPlaceholder: false,
-    description: "Building the core foundational pillars of Engineering Mathematics, Physics, Chemistry, English, and Computing fundamentals.",
-    quote: "“A strong foundation in basic sciences is the bedrock of breakthrough engineering innovations.”"
+    description: "Dr. J. Antony Rex Rodrigo introduces the esteemed faculty members of the Department of Humanities & Sciences — spanning Tamil, English, Mathematics, Physics, Chemistry, Physical Education, and Library Sciences — dedicated to building the intellectual foundation, communicative mastery, and analytical excellence of the Freshman Batch 2026–2030.",
+    quote: "“A strong foundational bedrock in basic sciences and humanities is the catalyst that transforms enthusiastic freshers into visionary engineering innovators.”"
   },
 
   // =========================================================================
-  // 16. FIRST YEAR FACULTIES (SEPARATE SINGLE SLIDE FOR EACH SUBJECT)
+  // 16. FIRST YEAR FACULTIES (HUMANITIES & SCIENCES)
   // =========================================================================
   // 16a. Tamil
   {
@@ -426,7 +535,7 @@ const SLIDES = [
     ]
   },
 
-  // 16b. English (With Dyana Flora & E. Flora Jacob)
+  // 16b. English
   {
     id: "faculty-english",
     type: "faculty-subject",
@@ -564,7 +673,7 @@ const SLIDES = [
     quote: "“A sound mind resides in a sound body — champions are built on discipline, fitness, and persistence.”",
     members: [
       {
-        name: "Mr. Rishop",
+        name: "Mr. V.RISHOP",
         role: "Physical Education Director (PET)",
         image: "assets/images/speakers/rishop_pet.png",
         fallback: "Screenshots/Rishop PET.jpeg",
@@ -573,7 +682,7 @@ const SLIDES = [
     ]
   },
 
-  // 16g. Library
+  // 16g. Library Sciences
   {
     id: "faculty-librarian",
     type: "faculty-subject",
@@ -585,7 +694,7 @@ const SLIDES = [
     quote: "“Knowledge is power, and the library is the engine that drives intellectual growth and lifelong curiosity.”",
     members: [
       {
-        name: "Mr. Asir",
+        name: "Mr. T.Aseer Rabin",
         role: "College Librarian",
         image: "assets/images/speakers/asir_librarian.png",
         fallback: "Screenshots/Asir Librarian.png",
@@ -595,41 +704,154 @@ const SLIDES = [
   },
 
   // =========================================================================
-  // 17. PRIZE DISTRIBUTION
+  // 17. DEPARTMENT OF MANAGEMENT STUDIES (MBA) - HOD & FACULTY INTRO
+  // =========================================================================
+  // 17a. MBA HOD Profile - Dr. Sivakumar
+  {
+    id: "hod-mba",
+    type: "hod-single",
+    agendaEvent: "HOD INTRODUCTION • DEPARTMENT OF MANAGEMENT STUDIES",
+    deptCode: "MBA",
+    deptName: "Department of Management Studies (MBA)",
+    name: "Dr. Sivakumar",
+    role: "Head of Department (HOD) - MBA",
+    image: "assets/images/speakers/sivakumar.png",
+    fallback: "Screenshots/Sivakumar.png",
+    isPlaceholder: false,
+    highlights: [
+      "Ph.D., MBA Management Leadership",
+      "Corporate Strategy & Business Analytics",
+      "Entrepreneurship & Incubation Mentor",
+      "Industry-Academia Collaboration",
+      "Financial Modeling & Operations Acumen"
+    ],
+    description: "Dr. Sivakumar heads the Department of Management Studies (MBA) at Grace College of Engineering, nurturing techno-managerial leaders, corporate strategists, entrepreneurs, and global business managers through innovative case pedagogy and practical industry immersion.",
+    quote: "“Leadership and management acumen empower engineers and professionals to convert brilliant ideas into global enterprises.”"
+  },
+
+  // 17b. MBA Faculty Team Introduction (4 Members)
+  {
+    id: "faculty-mba",
+    type: "faculty-subject",
+    agendaEvent: "FACULTY INTRODUCTION • DEPARTMENT OF MANAGEMENT STUDIES",
+    subject: "Department of Management Studies (MBA)",
+    subtitle: "Corporate Strategy, Finance, Marketing, HR & Business Analytics",
+    leadName: "Dr. Sivakumar (HOD / MBA)",
+    description: "Guiding future business executives in organizational behavior, digital marketing, portfolio management, supply chain analytics, and corporate leadership.",
+    quote: "“Empowering future business leaders with strategic acumen, analytical insight, and ethical leadership.”",
+    members: [
+      {
+        name: "Dr. Deodine Isaac J.",
+        role: "Assistant Professor / MBA",
+        image: "assets/images/speakers/deodine_isaac.png",
+        fallback: "Screenshots/Dr. DEODINE ISAAC J. Assistant Prof. MBA.jpeg",
+        isPlaceholder: false
+      },
+      {
+        name: "Mrs. C. Anitta",
+        role: "Assistant Professor / MBA",
+        image: "assets/images/speakers/anitta_mba.png",
+        fallback: "Screenshots/Mrs. C Anitta MBA.jpeg",
+        isPlaceholder: false
+      },
+      {
+        name: "Ms. R. Priya Shalini",
+        role: "Assistant Professor / MBA",
+        image: "assets/images/speakers/priya_shalini.png",
+        fallback: "Screenshots/R.Priya shalini MBA.jpeg",
+        isPlaceholder: false
+      },
+      {
+        name: "Ms. S. Shonica",
+        role: "Assistant Professor / MBA",
+        image: "",
+        fallback: "",
+        isPlaceholder: true
+      }
+    ]
+  },
+
+  // =========================================================================
+  // 18. PRIZE DISTRIBUTION (WITH MERIT AWARDEE IMAGES)
   // =========================================================================
   {
     id: "prize",
-    type: "feature",
-    agendaEvent: "PRIZE DISTRIBUTION",
-    title: "Prize Distribution & Academic Honors",
-    role: "Management & Dignitaries, GCOE",
-    points: [
-      "Felicitating entrance and higher secondary cut-off toppers",
-      "Recognizing admission merit scholarship awardees",
-      "Distributing awards for excellence in academic, sports, and cultural achievements",
-      "Inspiring the incoming freshman cohort to strive for the highest honors"
-    ]
+    type: "prize-awardees",
+    agendaEvent: "PRIZE DISTRIBUTION • ACADEMIC HONORS",
+    title: "Academic Honors & Admission Merit Awards",
+    subtitle: "Felicitating Top Higher Secondary Scorers & Entrance Merit Scholarship Awardees (Batch 2026–2030)",
+    awardees: [
+      {
+        name: "Juvariya Samreen J",
+        dept: "B.E. Computer Science & Engineering (CSE)",
+        badge: "★ TOP MERIT SCHOLAR",
+        image: "assets/images/speakers/juvariya_samreen.png",
+        fallback: "Screenshots/Juvariya samreen j CSE.jpeg",
+        desc: "Distinguished admission merit awardee recognized for exemplary entrance academic excellence."
+      },
+      {
+        name: "Janma B",
+        dept: "B.Tech AI & Data Science (AI & DS)",
+        badge: "★ TOP MERIT SCHOLAR",
+        image: "assets/images/speakers/janma_b.png",
+        fallback: "scratch/janma_page_1.png",
+        desc: "Outstanding merit scholarship recipient celebrated for higher secondary cut-off distinction."
+      },
+      {
+        name: "Blessy Kanaga A",
+        dept: "B.E. Computer Science & Engineering (CSE)",
+        badge: "★ TOP MERIT SCHOLAR",
+        image: "assets/images/speakers/blessy_kanaga.png",
+        fallback: "Screenshots/Blessy Kanaga A CSE.jpeg",
+        desc: "Honored for admission entrance excellence and stellar academic performance."
+      }
+    ],
+    quote: "“Recognizing and nurturing academic brilliance — inspiring the freshman class of 2026–2030 to achieve stellar heights.”"
   },
 
   // =========================================================================
-  // 18. ALUMNI & PRESENT LEARNER INSIGHTS (MOVED TO BEFORE LAST PAGE)
+  // 19. ALUMNI INSIGHTS & PRESENT LEARNER INSIGHTS (ALEX MATHEW & SUMITHA RANI)
   // =========================================================================
   {
-    id: "alumni",
-    type: "feature",
+    id: "alumni-spotlight",
+    type: "alumni-duo",
     agendaEvent: "ALUMNI INSIGHTS & PRESENT LEARNER INSIGHTS",
-    title: "Alumni Insights & Present Learner Insights",
-    role: "GCOE Alumni Network & Senior Student Leaders",
-    points: [
-      "Inspiring career journeys and industry experiences shared by distinguished alumni",
-      "Practical tips for freshers on coursework, competitive coding, hackathons, and projects",
-      "Senior student perspectives on campus clubs, cultural forums, and sports activities",
-      "Peer mentorship support system to help new students excel from Day 1"
+    title: "Distinguished Alumni & Senior Learner Perspectives",
+    subtitle: "Real-world experiences, campus roadmaps, and career wisdom shared by proud Grace College alumni",
+    speakers: [
+      {
+        name: "Alex Mathew",
+        role: "Distinguished Alumnus",
+        badge: "DISTINGUISHED ALUMNUS",
+        dept: "Grace College of Engineering Alumni Network",
+        image: "assets/images/speakers/alex_mathew.png",
+        fallback: "Screenshots/alex mathew.jpeg",
+        points: [
+          "Master core engineering concepts, coding practices, and mini-projects right from Year 1.",
+          "Actively participate in hackathons, coding clubs, and technical symposiums to stand out.",
+          "Build strong professional portfolios and leverage on-campus placement drives early."
+        ],
+        quote: "“Every challenge you embrace at Grace is an opportunity to forge technical grit, confidence, and career mastery.”"
+      },
+      {
+        name: "Sumitha Rani",
+        role: "Distinguished Alumna",
+        badge: "DISTINGUISHED ALUMNA",
+        dept: "Grace College of Engineering Alumni Network",
+        image: "assets/images/speakers/sumitha_rani.png",
+        fallback: "Screenshots/sumitha rani.jpeg",
+        points: [
+          "Make full use of our advanced laboratories, digital library resources, and faculty guidance.",
+          "Balance academic consistency with soft skills, communication, and extracurriculars.",
+          "Cultivate peer study networks and maintain curiosity to adapt to emerging global tech."
+        ],
+        quote: "“Dream ambitiously, utilize every laboratory and library resource, and build friendships that last a lifetime.”"
+      }
     ]
   },
 
   // =========================================================================
-  // 19. VOTE OF THANKS (LAST PAGE)
+  // 20. VOTE OF THANKS (LAST PAGE)
   // =========================================================================
   {
     id: "jaqulin-isabella",
@@ -652,12 +874,6 @@ function renderSlide(index) {
 
   const stage = document.getElementById('stageContent');
   const slide = SLIDES[index];
-
-  // Update HUD counter
-  const counterEl = document.getElementById('slideNum');
-  if (counterEl) {
-    counterEl.textContent = `${String(index + 1).padStart(2, '0')} / ${String(SLIDES.length).padStart(2, '0')}`;
-  }
 
   let html = '';
 
@@ -735,20 +951,24 @@ function renderSlide(index) {
   } else if (slide.type === 'special-invitee') {
     html = `
       <div class="slide-speaker-layout">
-        <div class="speaker-left-card special-invitee-card">
-          <div class="speaker-photo-frame placeholder-frame">
-            <div class="photo-placeholder-content">
-              <svg width="85" height="85" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                <circle cx="12" cy="7" r="4"></circle>
-              </svg>
-              <div class="ph-label">${slide.placeholderLabel || 'SPACE FOR PHOTO'}</div>
-            </div>
+        <div class="speaker-left-card special-invitee-card ${slide.isPlaceholder ? 'placeholder-card-glow' : ''}">
+          <div class="speaker-photo-frame ${slide.isPlaceholder ? 'placeholder-frame' : ''}">
+            ${slide.isPlaceholder ? `
+              <div class="photo-placeholder-content">
+                <svg width="85" height="85" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+                <div class="ph-label">${slide.placeholderLabel || 'SPACE FOR PHOTO'}</div>
+              </div>
+            ` : `
+              <img src="${slide.image}" alt="${slide.name}" class="speaker-real-photo" onerror="this.src='${slide.fallback || 'Screenshots/Stephen.png'}'" />
+            `}
           </div>
           <h2 class="speaker-display-name chief-guest-name-slot">${slide.name}</h2>
           ${slide.qualifications ? `<div class="cover-batch-badge" style="margin: 0.35rem 0 0.6rem 0;">${slide.qualifications}</div>` : ''}
           <div class="speaker-display-role">${slide.role}</div>
-          <div class="special-invitee-badge">★ SPECIAL INVITEE ★</div>
+          <div class="special-invitee-badge">${slide.badgeLabel || '★ SPECIAL INVITEE ★'}</div>
         </div>
 
         <div class="speaker-right-card">
@@ -817,6 +1037,53 @@ function renderSlide(index) {
           ${slide.recruiters ? `
             <div class="dept-recruiters-pill">
               ${slide.recruiters.map(r => `<span class="recruiter-chip">${r}</span>`).join('')}
+            </div>
+          ` : ''}
+        </div>
+      </div>
+    `;
+  } else if (slide.type === 'dept-spotlight') {
+    html = `
+      <div class="slide-dept-spotlight-layout">
+        <div class="dept-spotlight-left">
+          <div class="agenda-event-tag">★ ${slide.agendaEvent}</div>
+          <h1 class="agenda-event-title">${slide.deptName}</h1>
+          <div class="hod-dept-badge-pill" style="align-self: flex-start; margin: 0.3rem 0 0.8rem 0;">${slide.badge || slide.deptCode}</div>
+
+          <div class="dept-vision-box">
+            <div class="dept-vision-label">★ DEPARTMENTAL VISION & GOAL</div>
+            <div class="dept-vision-text">“${slide.vision}”</div>
+          </div>
+
+          <p class="agenda-event-desc" style="font-size: 0.95rem; margin-bottom: 0.8rem;">${slide.description}</p>
+
+          <div style="font-family: var(--font-mono); font-size: 0.82rem; font-weight: 700; color: var(--text-gold); margin-top: 0.2rem;">
+            ★ CORE ENGINEERING SPECIALIZATIONS:
+          </div>
+          <div class="mech-topics-grid">
+            ${slide.topics ? slide.topics.map(t => `<span class="mech-topic-chip">⚙ ${t}</span>`).join('') : ''}
+          </div>
+        </div>
+
+        <div class="dept-spotlight-right">
+          <div class="agenda-event-tag">★ INFRASTRUCTURE & EXPERIMENTAL RIGOR</div>
+          <h1 class="agenda-event-title" style="font-size: 1.85rem;">Advanced Laboratories & Practical Rigor</h1>
+
+          <div class="mech-labs-grid">
+            ${slide.labs ? slide.labs.map(lab => `
+              <div class="mech-lab-item">
+                <div class="mech-lab-title">🔬 ${lab.title}</div>
+                <div class="mech-lab-desc">${lab.desc}</div>
+              </div>
+            `).join('') : ''}
+          </div>
+
+          ${slide.outcomes ? `
+            <div class="dept-outcomes-pill">
+              <div class="dept-outcomes-header">✦ GRADUATE PROGRAMME OUTCOMES:</div>
+              <div class="dept-outcomes-tags">
+                ${slide.outcomes.map(o => `<span class="outcome-tag">✔ ${o}</span>`).join('')}
+              </div>
             </div>
           ` : ''}
         </div>
@@ -908,7 +1175,7 @@ function renderSlide(index) {
         </div>
       `;
     } else {
-      // Multi-member faculty subject layout (English, Mathematics, Physics)
+      // Multi-member faculty subject layout (English, Mathematics, Physics, MBA)
       html = `
         <div class="slide-faculty-subject-layout">
           <div class="faculty-subject-header">
@@ -948,6 +1215,36 @@ function renderSlide(index) {
         </div>
       `;
     }
+  } else if (slide.type === 'prize-awardees') {
+    html = `
+      <div class="slide-prize-awardees-layout">
+        <div class="prize-header-strip">
+          <div class="agenda-event-tag">★ ${slide.agendaEvent}</div>
+          <h1 class="agenda-event-title">${slide.title}</h1>
+          <div class="agenda-sub" style="font-size: 0.95rem; margin-top: 0.2rem;">${slide.subtitle}</div>
+        </div>
+
+        <div class="awardees-grid">
+          ${slide.awardees.map(awd => `
+            <div class="awardee-card">
+              <div class="awardee-avatar-frame">
+                <img src="${awd.image}" alt="${awd.name}" class="speaker-real-photo" onerror="this.src='${awd.fallback || 'Screenshots/Stephen.png'}'" />
+              </div>
+              <div class="awardee-badge">${awd.badge}</div>
+              <h2 class="awardee-name">${awd.name}</h2>
+              <div class="awardee-dept">${awd.dept}</div>
+              <p class="awardee-desc">${awd.desc}</p>
+            </div>
+          `).join('')}
+        </div>
+
+        ${slide.quote ? `
+          <div class="prize-footer-quote">
+            ${slide.quote}
+          </div>
+        ` : ''}
+      </div>
+    `;
   } else if (slide.type === 'feature') {
     html = `
       <div class="slide-feature-layout">
@@ -965,6 +1262,46 @@ function renderSlide(index) {
         </div>
       </div>
     `;
+  } else if (slide.type === 'alumni-duo') {
+    html = `
+      <div class="slide-alumni-duo-layout">
+        <div class="alumni-header-strip">
+          <div class="agenda-event-tag">★ ${slide.agendaEvent}</div>
+          <h1 class="agenda-event-title">${slide.title}</h1>
+          <div class="agenda-sub" style="font-size: 0.95rem; margin-top: 0.2rem;">${slide.subtitle}</div>
+        </div>
+
+        <div class="alumni-cards-row">
+          ${slide.speakers.map(spk => `
+            <div class="alumni-speaker-card">
+              <div class="alumni-top-profile">
+                <div class="alumni-avatar-frame">
+                  <img src="${spk.image}" alt="${spk.name}" class="speaker-real-photo" onerror="this.src='${spk.fallback || 'Screenshots/Stephen.png'}'" />
+                </div>
+                <div class="alumni-profile-info">
+                  <div class="alumni-badge">★ ${spk.badge}</div>
+                  <h2 class="alumni-name">${spk.name}</h2>
+                  <div class="alumni-dept-tag">${spk.dept}</div>
+                </div>
+              </div>
+
+              <div class="alumni-points-list">
+                ${spk.points.map(pt => `
+                  <div class="alumni-point-item">
+                    <span>✦</span>
+                    <span>${pt}</span>
+                  </div>
+                `).join('')}
+              </div>
+
+              <div class="alumni-quote-box">
+                ${spk.quote}
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `;
   }
 
   stage.innerHTML = html;
@@ -974,20 +1311,20 @@ function renderSlide(index) {
     const wrapper = stage;
     const child = wrapper.firstElementChild;
     if (!child) return;
-    
+
     // Reset any previous scale
     child.style.transform = '';
     child.style.transformOrigin = 'center center';
-    
-    const viewH = window.innerHeight - 24; // small margin for HUD
+
+    const viewH = window.innerHeight - 20;
     const viewW = wrapper.offsetWidth;
     const contentH = child.scrollHeight;
     const contentW = child.scrollWidth;
-    
+
     const scaleY = contentH > viewH ? viewH / contentH : 1;
     const scaleX = contentW > viewW ? viewW / contentW : 1;
     const scale = Math.min(scaleY, scaleX, 1);
-    
+
     if (scale < 1) {
       child.style.transform = `scale(${scale.toFixed(4)})`;
       child.style.transformOrigin = 'center center';

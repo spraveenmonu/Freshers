@@ -1,0 +1,5 @@
+=== Screenshots/civil banner pdf.pdf (Pages: 1) ===
+--- Page 1 Text ---
+
+Saved rendered page: scratch/civil_banner_page_1.png
+Extracted image scratch/civil_banner_p1_img1.png (dims: 9142x9142)
