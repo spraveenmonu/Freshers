@@ -48,11 +48,11 @@ const SLIDES = [
       { time: "11.20 AM", event: "Orientation", person: "Dr. S. Sidhardhan", role: "Principal, GCOE", slideIdx: 8 },
       { time: "11.40 AM", event: "Alumni & Present Learner Insights", person: "R. Alex Mathew & Sumitha Rani", role: "Gracians Overview", slideIdx: 9 },
       { time: "11.55 AM", event: "HOD's Introduction & Dept Showcases", person: "Heads of Departments", role: "Engineering & H&S", slideIdx: 10 },
-      { time: "12.30 PM", event: "Introduction of First Year Faculties", person: "Dr. J. Antony Rex Rodrigo", role: "HOD / H&S", slideIdx: 24 },
-      { time: "12.50 PM", event: "Department of Management Studies", person: "Dr. Sivakumar & MBA Faculty", role: "HOD & Faculty / MBA", slideIdx: 32 },
-      { time: "01.00 PM", event: "Honouring the Toppers", person: "Dr. B. Janet, ASP NIT Trichy", role: "Prize Distribution", slideIdx: 35 },
-      { time: "01.10 PM", event: "Vote of Thanks", person: "Dr. R. Jaqulin Isabella", role: "AP / Tamil", slideIdx: 37 },
-      { time: "01.20 PM", event: "Closing Prayer & Benediction", person: "Rev. Simon", role: "Benediction & Blessings", slideIdx: 38 }
+      { time: "12.30 PM", event: "Introduction of First Year Faculties", person: "Dr. J. Antony Rex Rodrigo", role: "HOD / H&S", slideIdx: 25 },
+      { time: "12.50 PM", event: "Department of Management Studies", person: "Dr. Sivakumar & MBA Faculty", role: "HOD & Faculty / MBA", slideIdx: 33 },
+      { time: "01.00 PM", event: "Honouring the Toppers", person: "Dr. B. Janet, ASP NIT Trichy", role: "Prize Distribution", slideIdx: 36 },
+      { time: "01.10 PM", event: "Vote of Thanks", person: "Dr. R. Jaqulin Isabella", role: "AP / Tamil", slideIdx: 38 },
+      { time: "01.20 PM", event: "Closing Prayer & Benediction", person: "Rev. Simon", role: "Benediction & Blessings", slideIdx: 39 }
     ]
   },
 
@@ -620,7 +620,32 @@ const SLIDES = [
   },
 
   // =========================================================================
-  // 15. HOD OF H&S INTRODUCTION OF FIRST YEAR FACULTIES
+  // 15. HUMANITIES & SCIENCES (H&S) HOD PROFILE
+  // =========================================================================
+  {
+    id: "hod-hs",
+    type: "hod-single",
+    agendaEvent: "HOD INTRODUCTION • HUMANITIES & SCIENCES",
+    deptCode: "H&S",
+    deptName: "Department of Humanities & Sciences",
+    name: "Dr. J. Antony Rex Rodrigo",
+    role: "Professor & Head of Department (HOD) - Humanities & Sciences",
+    image: "assets/images/speakers/antony_rex.png",
+    fallback: "Screenshots/Antony Rex HOD.jpeg",
+    isPlaceholder: false,
+    highlights: [
+      "M.Sc., M.Phil., Ph.D. • 20+ Years Experience",
+      "Head of the Department - Humanities & Sciences",
+      "Foundational Sciences & Engineering Mathematics",
+      "Student Academic Mentorship & Induction Leadership",
+      "Bridging Basic Sciences with Modern Engineering"
+    ],
+    description: "Dr. J. Antony Rex Rodrigo is the Professor & Head of the Department of Humanities & Sciences at Grace College of Engineering. Leading the foundational academic programs across Mathematics, Physics, Chemistry, English, and Tamil, he nurtures first-year engineering students with strong analytical competence, scientific inquiry, communicative mastery, and ethical values.",
+    quote: "“A solid foundation in basic sciences and humanities is the catalyst that transforms enthusiastic freshers into visionary engineering innovators.”"
+  },
+
+  // =========================================================================
+  // 16. HOD OF H&S - INTRODUCTION OF FIRST YEAR FACULTIES
   // =========================================================================
   {
     id: "hod-hs-intro",
@@ -720,7 +745,7 @@ const SLIDES = [
         isPlaceholder: false
       },
       {
-        name: "Mrs.G.Arockia Shiny",
+        name: "Mrs.G.Arockia Shiney",
         role: "Assistant Professor / Maths",
         image: "assets/images/speakers/shiny_arockia.png",
         fallback: "Screenshots/shiny arockia.jpeg",
