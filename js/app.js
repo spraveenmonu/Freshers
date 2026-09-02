@@ -50,9 +50,9 @@ const SLIDES = [
       { time: "11.55 AM", event: "HOD's Introduction & Dept Showcases", person: "Heads of Departments", role: "Engineering & H&S", slideIdx: 10 },
       { time: "12.30 PM", event: "Introduction of First Year Faculties", person: "Dr. J. Antony Rex Rodrigo", role: "HOD / H&S", slideIdx: 25 },
       { time: "12.50 PM", event: "Department of Management Studies", person: "Dr. Sivakumar & MBA Faculty", role: "HOD & Faculty / MBA", slideIdx: 33 },
-      { time: "01.00 PM", event: "Honouring the Toppers", person: "Dr. B. Janet, ASP NIT Trichy", role: "Prize Distribution", slideIdx: 36 },
-      { time: "01.10 PM", event: "Vote of Thanks", person: "Dr. R. Jaqulin Isabella", role: "AP / Tamil", slideIdx: 38 },
-      { time: "01.20 PM", event: "Closing Prayer & Benediction", person: "Rev. Simon", role: "Benediction & Blessings", slideIdx: 39 }
+      { time: "01.00 PM", event: "Honouring the Toppers", person: "Dr. B. Janet, ASP NIT Trichy", role: "Prize Distribution", slideIdx: 38 },
+      { time: "01.10 PM", event: "Vote of Thanks", person: "Dr. R. Jaqulin Isabella", role: "AP / Tamil", slideIdx: 40 },
+      { time: "01.20 PM", event: "Closing Prayer & Benediction", person: "Rev. Simon", role: "Benediction & Blessings", slideIdx: 41 }
     ]
   },
 
@@ -145,12 +145,12 @@ const SLIDES = [
     quote: "“Continuous learning, strong foundational values, and technical agility are the keys to building an enduring career in modern industry.”"
   },
 
-  // 8. Principal Orientation - Dr. S. Sidhardhan
+  // 8. Principal Orientation - Dr. S. Sidharthan
   {
     id: "sidhardhan",
     type: "speaker",
     agendaEvent: "ORIENTATION",
-    name: "Dr. S. Sidhardhan",
+    name: "Dr. S. Sidharthan",
     role: "Principal, GCOE",
     image: "assets/images/speakers/sidharthan.png",
     fallback: "Screenshots/Sidharthan.png",
@@ -183,7 +183,7 @@ const SLIDES = [
         quote: "“Every challenge you embrace at Grace is an opportunity to forge technical grit, confidence, and career mastery.”"
       },
       {
-        name: "Sumitha Rani",
+        name: "M.Sumitha Rani",
         role: "Distinguished Alumna",
         badge: "DISTINGUISHED ALUMNA",
         dept: "Grace College of Engineering Alumni Network",
@@ -773,14 +773,14 @@ const SLIDES = [
     quote: "“Physics illuminates the laws of nature and transforms pure scientific inquiry into transformative technology.”",
     members: [
       {
-        name: "Dr. Jini Kamal Eastro",
+        name: "Dr. J.Jini Kamal Eastro",
         role: "Assistant Professor / Physics",
         image: "assets/images/speakers/jini_kamal.png",
         fallback: "Screenshots/Jini kamal.jpeg",
         isPlaceholder: false
       },
       {
-        name: "Mr. Selvaprem Kumar",
+        name: "Mr. S.Selvaprem Kumar",
         role: "Assistant Professor / Physics",
         image: "assets/images/speakers/selvaprem_kumar.png",
         fallback: "Screenshots/Selvaprem kumar physics AP.jpeg",
@@ -921,7 +921,7 @@ const SLIDES = [
         isPlaceholder: false
       },
       {
-        name: "Mrs. R. Priya Shalini",
+        name: "Ms. R. Priya Shalini",
         role: "Assistant Professor / MBA",
         image: "assets/images/speakers/priya_shalini.png",
         fallback: "Screenshots/R.Priya shalini MBA.jpeg",
@@ -945,9 +945,70 @@ const SLIDES = [
   },
 
   // =========================================================================
-  // 18. HONOURING THE TOPPERS (SPLIT INTO 2 DEDICATED SLIDES)
+  // 18. PLACEMENT & TRAINING CELL - MR. R. JAMES NESARATNAM
   // =========================================================================
-  // 18a. Prize Distributor Felicitator - Dr. B. Janet (NIT Trichy)
+  {
+    id: "placement-coordinator",
+    type: "hod-single",
+    agendaEvent: "PLACEMENT & TRAINING CELL • CAREER PATHWAYS",
+    deptCode: "PLACEMENT CELL",
+    deptName: "Placement & Training Cell — Launching Global Careers",
+    name: "Mr. R. James Nesaratnam",
+    role: "Assistant Professor (ECE) & Training and Placement Officer",
+    image: "assets/images/speakers/james_nesaratnam.png",
+    fallback: "Screenshots/R.James Nesaratnam.jpeg",
+    isPlaceholder: false,
+    stats: [
+      { value: "12 LPA", label: "Top Salary Package" },
+      { value: "100%", label: "Placement Assistance" },
+      { value: "50+", label: "Recruiting Partners" }
+    ],
+    highlights: [
+      "M.E. (AP/ECE) • Training & Placement Officer",
+      "Multi-tier Aptitude, Soft Skills & Coding Bootcamps",
+      "Direct Campus Drives with Premier MNCs & Start-ups",
+      "Industry Internships, Industrial Visits & Mock Interviews",
+      "Dedicated Career Guidance & Higher Education Cell"
+    ],
+    recruiters: [
+      "TCS", "Infosys", "HCLTech", "Foxconn", "TVS Sundaram", "OneYes Infotech",
+      "Digisailor", "Literact", "Jilaba", "RS Windtech", "Nissi Engg", "Palnar"
+    ],
+    description: "Mr. R. James Nesaratnam spearheads the Placement and Training Cell at Grace College of Engineering, ensuring seamless career transformation for students across all engineering branches and MBA. Through continuous industry partnerships, skill development bootcamps, and on-campus recruitment with leading MNCs and high-growth start-ups, the placement cell empowers every student with global employability, competence, and career readiness.",
+    quote: "“Bridging campus potential with global industry leadership — empowering every student to step confidently into a rewarding professional career.”"
+  },
+
+  // =========================================================================
+  // 19. ADMINISTRATIVE OFFICER (AO) - MR. K. DHINAKARAN
+  // =========================================================================
+  {
+    id: "admin-officer",
+    type: "admin-officer",
+    agendaEvent: "CAMPUS ADMINISTRATION & STUDENT WELFARE",
+    deptCode: "CAMPUS ADMINISTRATION",
+    deptName: "Office of Campus Administration & Student Affairs",
+    name: "Mr. K.Dhinakaran",
+    role: "Administrative Officer (AO), Grace College of Engineering",
+    highlights: [
+      "Administrative Leadership & Campus Governance",
+      "Student Welfare, Hostel & Transport Logistics",
+      "Academic Support, Admissions & Regulatory Affairs",
+      "Campus Infrastructure, Safety & Facilities Management",
+      "Dedicated to Student Harmony & Holistic Excellence"
+    ],
+    domains: [
+      { icon: "🏛️", label: "Institutional Governance", desc: "Campus operations, regulatory coordination & administration" },
+      { icon: "🚌", label: "Student Logistics", desc: "Hostel facilities, transport fleet & campus amenities" },
+      { icon: "🛡️", label: "Student Support & Safety", desc: "24/7 student care, discipline & holistic campus welfare" }
+    ],
+    description: "Mr. K. Dhinakaran oversees the comprehensive administrative ecosystem of Grace College of Engineering. Steering campus operations, infrastructure development, student amenities, logistical support, and institutional governance, he ensures a safe, vibrant, disciplined, and empowering collegiate environment for every student from day one.",
+    quote: "“Efficient administration is the backbone that enables academic brilliance, seamless campus life, and student empowerment to flourish.”"
+  },
+
+  // =========================================================================
+  // 20. HONOURING THE TOPPERS (SPLIT INTO 2 DEDICATED SLIDES)
+  // =========================================================================
+  // 20a. Prize Distributor Felicitator - Dr. B. Janet (NIT Trichy)
   {
     id: "prize-distributor",
     type: "special-invitee",
@@ -1152,6 +1213,17 @@ function renderSlide(index) {
         <div class="speaker-right-card">
           <div class="agenda-event-tag">★ PROGRAM AGENDA</div>
           <h1 class="agenda-event-title">${slide.agendaEvent}</h1>
+
+          ${slide.highlights ? `
+            <div class="hod-highlights-strip">
+              ${slide.highlights.map(h => `
+                <span class="hod-highlight-badge">
+                  ✦ ${h}
+                </span>
+              `).join('')}
+            </div>
+          ` : ''}
+
           <p class="agenda-event-desc">${slide.description}</p>
           
           <div class="speaker-quote-banner">
@@ -1361,11 +1433,11 @@ function renderSlide(index) {
           <div class="speaker-photo-frame ${slide.isPlaceholder ? 'placeholder-frame' : ''}">
             ${slide.isPlaceholder ? `
               <div class="photo-placeholder-content">
-                <svg width="85" height="85" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <svg width="105" height="105" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
                   <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                   <circle cx="12" cy="7" r="4"></circle>
                 </svg>
-                <div class="ph-label">${slide.placeholderLabel || `SPACE FOR ${slide.deptCode} HOD PHOTO`}</div>
+                <div class="ph-label">${slide.placeholderLabel || `SPACE FOR ${slide.deptCode} PHOTO`}</div>
               </div>
             ` : `
               <img src="${slide.image}" alt="${slide.name}" class="speaker-real-photo" onerror="this.src='${slide.fallback || 'Screenshots/Stephen.png'}'" />
@@ -1377,9 +1449,77 @@ function renderSlide(index) {
         </div>
 
         <div class="speaker-right-card">
-          <div class="agenda-event-tag">★ HOD INTRODUCTION • ${slide.deptCode}</div>
+          <div class="agenda-event-tag">★ ${slide.agendaEvent || ('HOD INTRODUCTION • ' + slide.deptCode)}</div>
           <h1 class="agenda-event-title">${slide.deptName}</h1>
+
+          ${slide.stats ? `
+            <div class="dept-stats-row" style="margin-bottom: 0.75rem;">
+              ${slide.stats.map(st => `
+                <div class="dept-stat-box">
+                  <div class="dept-stat-val">${st.value}</div>
+                  <div class="dept-stat-lbl">${st.label}</div>
+                </div>
+              `).join('')}
+            </div>
+          ` : ''}
           
+          ${slide.highlights ? `
+            <div class="hod-highlights-strip">
+              ${slide.highlights.map(h => `
+                <span class="hod-highlight-badge">
+                  ✦ ${h}
+                </span>
+              `).join('')}
+            </div>
+          ` : ''}
+
+          <p class="agenda-event-desc">${slide.description}</p>
+
+          ${slide.recruiters ? `
+            <div class="dept-recruiters-pill" style="margin-top: 0.5rem; margin-bottom: 0.6rem;">
+              ${slide.recruiters.map(r => `<span class="recruiter-chip">${r}</span>`).join('')}
+            </div>
+          ` : ''}
+          
+          <div class="speaker-quote-banner">
+            <div class="quote-symbol">“</div>
+            <div class="quote-text">${slide.quote || `“Fostering technical excellence, innovation, and ethical leadership in ${slide.deptCode}.”`}</div>
+          </div>
+        </div>
+      </div>
+    `;
+  } else if (slide.type === 'admin-officer') {
+    html = `
+      <div class="slide-speaker-layout">
+        <div class="speaker-left-card ao-left-card">
+          <div class="ao-crest-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+          </div>
+          <h2 class="ao-name">${slide.name}</h2>
+          <div class="ao-role">${slide.role}</div>
+          <div class="ao-badge">
+            ★ CAMPUS ADMINISTRATION ★
+          </div>
+          
+          <div class="ao-domains-list">
+            ${slide.domains ? slide.domains.map(d => `
+              <div class="ao-domain-item">
+                <span class="ao-domain-icon">${d.icon}</span>
+                <div class="ao-domain-text">
+                  <div class="ao-domain-label">${d.label}</div>
+                  <div class="ao-domain-desc">${d.desc}</div>
+                </div>
+              </div>
+            `).join('') : ''}
+          </div>
+        </div>
+
+        <div class="speaker-right-card">
+          <div class="agenda-event-tag">★ ${slide.agendaEvent}</div>
+          <h1 class="agenda-event-title">${slide.deptName}</h1>
+
           ${slide.highlights ? `
             <div class="hod-highlights-strip">
               ${slide.highlights.map(h => `
@@ -1394,7 +1534,7 @@ function renderSlide(index) {
           
           <div class="speaker-quote-banner">
             <div class="quote-symbol">“</div>
-            <div class="quote-text">${slide.quote || `“Fostering technical excellence, innovation, and ethical leadership in ${slide.deptCode}.”`}</div>
+            <div class="quote-text">${slide.quote}</div>
           </div>
         </div>
       </div>
