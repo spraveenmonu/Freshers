@@ -706,28 +706,28 @@ const SLIDES = [
         isPlaceholder: false
       },
       {
-        name: "Dr. Victor Emmanuel",
+        name: "Dr.G.Victor Emmanuel",
         role: "Associate Professor / Maths",
         image: "assets/images/speakers/victor.png",
         fallback: "Screenshots/Victor Immanuel.png",
         isPlaceholder: false
       },
       {
-        name: "Dr. Raman",
+        name: "Dr.R.Raman",
         role: "Assistant Professor / Maths",
         image: "assets/images/speakers/raman.png",
         fallback: "Screenshots/Raman.png",
         isPlaceholder: false
       },
       {
-        name: "Mrs. Arockia Shiny",
+        name: "Mrs.G.Arockia Shiny",
         role: "Assistant Professor / Maths",
         image: "assets/images/speakers/shiny_arockia.png",
         fallback: "Screenshots/shiny arockia.jpeg",
         isPlaceholder: false
       },
       {
-        name: "Mrs. Jeyantha",
+        name: "Mrs.G.Jeyantha",
         role: "Assistant Professor / Maths",
         image: "assets/images/speakers/jeyantha.png",
         fallback: "Screenshots/jeyantha.jpeg",
