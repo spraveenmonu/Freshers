@@ -40,7 +40,7 @@ const SLIDES = [
     subtitle: "18TH FRESHER'S DAY • GRACE COLLEGE OF ENGINEERING (03.09.2026)",
     venueTime: "VENUE: GRACE AUDITORIUM | TIME: 10.00 AM",
     items: [
-      { time: "10.00 AM", event: "Invocation", person: "Mr. S. Stephen", role: "Vice Chairman, GCOE", slideIdx: 3 },
+      { time: "10.00 AM", event: "Invocation", person: "Rev. Simon", role: "Benediction & Blessings", slideIdx: 3 },
       { time: "10.10 AM", event: "Opening Remarks & Formal Welcome", person: "Dr. M. D. Mohan Gift", role: "Vice Principal, GCOE", slideIdx: 4 },
       { time: "10.25 AM", event: "Presidential Address", person: "Mr. C. M. Joshua", role: "Chairman, GCOE", slideIdx: 5 },
       { time: "10.45 AM", event: "Inaugural Address", person: "Sri R. Shiva Prasad IPS", role: "Superintendent of Police", slideIdx: 6 },
@@ -52,21 +52,36 @@ const SLIDES = [
       { time: "12.50 PM", event: "Department of Management Studies", person: "Dr. Sivakumar & MBA Faculty", role: "HOD & Faculty / MBA", slideIdx: 33 },
       { time: "01.00 PM", event: "Honouring the Toppers", person: "Dr. B. Janet, ASP NIT Trichy", role: "Prize Distribution", slideIdx: 38 },
       { time: "01.10 PM", event: "Vote of Thanks", person: "Dr. R. Jaqulin Isabella", role: "AP / Tamil", slideIdx: 40 },
-      { time: "01.20 PM", event: "Closing Prayer & Benediction", person: "Rev. Simon", role: "Benediction & Blessings", slideIdx: 41 }
+      { time: "01.20 PM", event: "Closing Prayer & Benediction", person: "Mr. S. Stephen", role: "Vice Chairman, GCOE", slideIdx: 41 }
     ]
   },
 
-  // 3. Prayer
+  // 3. Opening Prayer & Invocation (Rev. Simon)
   {
-    id: "stephen",
-    type: "speaker",
-    agendaEvent: "PRAYER",
-    name: "Mr. S. Stephen",
-    role: "Vice Chairman, GCOE",
-    image: "assets/images/speakers/stephen.png",
-    fallback: "Screenshots/Stephen.png",
-    description: "Invocation and prayer seeking divine blessings for the new academic journey of the 2026–2030 freshman batch.",
-    quote: "“The fear of the Lord is the beginning of wisdom — May your journey at Grace be filled with purpose and excellence.”"
+    id: "benediction",
+    type: "benediction",
+    agendaEvent: "INVOCATION & PRAYER",
+    name: "Rev. Simon",
+    role: "Pastoral Blessing & Benediction",
+    pillars: [
+      {
+        icon: "🕊",
+        title: "Divine Wisdom & Guidance",
+        desc: "Seeking divine insight, intellectual illumination, and spiritual grace for all freshers throughout their four-year collegiate journey."
+      },
+      {
+        icon: "🛡",
+        title: "Protection, Health & Safety",
+        desc: "Praying for peace, physical well-being, campus harmony, and holistic safety for all students, respected parents, and faculty."
+      },
+      {
+        icon: "🌟",
+        title: "Academic Success & Purpose",
+        desc: "Empowering young innovators to cultivate ethical values, unwavering perseverance, and transformative careers that serve the nation."
+      }
+    ],
+    quote: "“The Lord bless you and keep you; the Lord make His face shine upon you and be gracious to you; the Lord lift up His countenance upon you and give you peace.”",
+    benedictionText: "May the grace of the Almighty rest upon the freshman class of Batch 2026–2030, inspiring them to be beacons of hope, integrity, and groundbreaking excellence."
   },
 
   // 3. Welcome Address
@@ -1099,33 +1114,18 @@ const SLIDES = [
   },
 
   // =========================================================================
-  // 21. CLOSING PRAYER & BENEDICTION (REV. SIMON)
+  // 21. CLOSING PRAYER & BENEDICTION (MR. S. STEPHEN)
   // =========================================================================
   {
-    id: "benediction",
-    type: "benediction",
+    id: "stephen",
+    type: "speaker",
     agendaEvent: "CLOSING PRAYER & BENEDICTION",
-    name: "Rev. Simon",
-    role: "Pastoral Blessing & Benediction",
-    pillars: [
-      {
-        icon: "🕊",
-        title: "Divine Wisdom & Guidance",
-        desc: "Seeking divine insight, intellectual illumination, and spiritual grace for all freshers throughout their four-year collegiate journey."
-      },
-      {
-        icon: "🛡",
-        title: "Protection, Health & Safety",
-        desc: "Praying for peace, physical well-being, campus harmony, and holistic safety for all students, respected parents, and faculty."
-      },
-      {
-        icon: "🌟",
-        title: "Academic Success & Purpose",
-        desc: "Empowering young innovators to cultivate ethical values, unwavering perseverance, and transformative careers that serve the nation."
-      }
-    ],
-    quote: "“The Lord bless you and keep you; the Lord make His face shine upon you and be gracious to you; the Lord lift up His countenance upon you and give you peace.”",
-    benedictionText: "May the grace of the Almighty rest upon the freshman class of Batch 2026–2030, inspiring them to be beacons of hope, integrity, and groundbreaking excellence."
+    name: "Mr. S. Stephen",
+    role: "Vice Chairman, GCOE",
+    image: "assets/images/speakers/stephen.png",
+    fallback: "Screenshots/Stephen.png",
+    description: "Offering closing prayers and benediction, seeking divine blessings, protection, and purposeful journeys for the 2026–2030 freshman batch.",
+    quote: "“The fear of the Lord is the beginning of wisdom — May your journey at Grace be filled with purpose and excellence.”"
   }
 ];
 
@@ -1779,7 +1779,7 @@ function renderSlide(index) {
         </div>
 
         <div class="speaker-right-card">
-          <div class="agenda-event-tag">★ PROGRAM AGENDA • CLOSING</div>
+          <div class="agenda-event-tag">★ PROGRAM AGENDA</div>
           <h1 class="agenda-event-title">${slide.agendaEvent}</h1>
 
           <div class="prayer-pillars-grid">
