@@ -747,7 +747,7 @@ const SLIDES = [
       },
       {
         name: "Dr.G.Victor Emmanuel",
-        role: "Associate Professor / Maths",
+        role: "Associate Professor / Maths \n NSS Coordinator",
         image: "assets/images/speakers/victor.png",
         fallback: "Screenshots/Victor Immanuel.png",
         isPlaceholder: false
